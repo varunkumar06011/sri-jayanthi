@@ -31,7 +31,7 @@ export interface SiteData {
   visits: number;
 }
 
-const STORAGE_KEY = 'sri_jayanthi_data_v2';
+const STORAGE_KEY = 'sri_jayanthi_data_v3';
 
 export const defaultProducts: Product[] = [
   {
@@ -66,39 +66,6 @@ export const defaultProducts: Product[] = [
     ingredients:
       'Ashwagandha, Guduchi, Tulsi, Yashtimadhu, Pippali, Amalaki, Haridra',
     for: 'Frequent colds, cough, sinusitis, allergies, asthma, weak immunity, and post-illness recovery.',
-  },
-  {
-    id: '4',
-    name: 'Kesha Oli Hair Oil',
-    description:
-      'A nourishing hair oil prepared with bhringraj, amla, and coconut milk base. Revitalises follicles, restores natural colour pigment, and cools the scalp.',
-    price: 1200,
-    image: '/products/kesha-oli.jpg',
-    ingredients:
-      'Bhringraj, Amla, Brahmi, Jatamansi, Neem, Coconut milk, Sesame oil',
-    for: 'Hair fall, premature greying, dandruff, scalp dryness, split ends, and thinning hair.',
-  },
-  {
-    id: '5',
-    name: 'Stree Sanjivani',
-    description:
-      'A comprehensive women\'s health tonic that harmonises hormones, regulates menstrual cycles, and supports reproductive wellness through all life stages.',
-    price: 1200,
-    image: '/products/stree-sanjivani.jpg',
-    ingredients:
-      'Ashoka, Shatavari, Lodhra, Dashamoola, Guduchi, Chandana, Kumari',
-    for: 'PCOS, irregular periods, hormonal imbalance, PMS, menopausal symptoms, uterine health, and white discharge.',
-  },
-  {
-    id: '6',
-    name: 'Shankha Bhasma',
-    description:
-      'A traditional Ayurvedic antacid and digestive aid prepared from purified conch shell ash. Neutralises excess stomach acid and heals gastric lining naturally.',
-    price: 644,
-    image: '/products/shankha-bhasma.jpg',
-    ingredients:
-      'Shankha Bhasma (calcined conch shell), Amalaki, Yastimadhu, Shatavari',
-    for: 'Acidity, heartburn, GERD, gastric ulcer, gastritis, hyperacidity, and burning sensation in chest.',
   },
 ];
 
