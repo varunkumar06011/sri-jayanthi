@@ -21,17 +21,17 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <img
               src="/Logo-Final-Version.png"
               alt="Sri Jayanthi"
-              className="h-10 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain shrink-0"
             />
-            <div className="flex flex-col">
-              <span className="font-serif text-xl md:text-2xl font-semibold text-forest leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-forest leading-tight truncate">
                 Sri Jayanthi
               </span>
-              <span className="text-[10px] md:text-xs tracking-widest text-gold uppercase font-sans">
+              <span className="text-[10px] md:text-xs tracking-widest text-gold uppercase font-sans hidden sm:block">
                 Wellbeing
               </span>
             </div>
@@ -65,7 +65,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-forest"
+            className="md:hidden p-1.5 sm:p-2 text-forest shrink-0"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
