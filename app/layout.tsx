@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Sri Jayanthi Wellbeing | Ayurveda • Wellness • Empowerment',
   description:
     'Authentic Ayurvedic healing for spine issues, skin conditions, and lifestyle disorders. Panchakarma, medical camps, and natural wellness products.',
+  icons: {
+    icon: '/Logo-Final-Version.png',
+  },
 };
 
 export const viewport: Viewport = {
