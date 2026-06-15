@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
   Package,
+  Tent,
   Users,
   Settings,
   ArrowLeft,
@@ -16,6 +17,7 @@ import { useState } from 'react';
 const nav = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/admin/products', label: 'Products', icon: Package },
+  { href: '/admin/camps', label: 'Medical Camps', icon: Tent },
   { href: '/admin/leads', label: 'Leads', icon: Users },
   { href: '/admin/settings', label: 'Settings', icon: Settings },
 ];

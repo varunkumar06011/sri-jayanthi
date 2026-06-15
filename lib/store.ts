@@ -23,46 +23,55 @@ export interface ContactInfo {
   whatsappNumber: string;
 }
 
+export interface CampImage {
+  id: string;
+  url: string;
+  caption: string;
+  location: string;
+  date: string;
+}
+
 export interface SiteData {
   logoUrl: string;
   contact: ContactInfo;
   products: Product[];
+  campImages: CampImage[];
   leads: Lead[];
   visits: number;
 }
 
-const STORAGE_KEY = 'sri_jayanthi_data_v3';
+const STORAGE_KEY = 'sri_jayanthi_data_v5';
 
 export const defaultProducts: Product[] = [
   {
     id: '1',
-    name: 'Agnisandhi Vati',
+    name: 'Gas-Empt',
     description:
       'A classical Ayurvedic digestive tonic formulated to rekindle digestive fire (Agni), relieve gas, bloating, acidity, and constipation. Supports liver detox and IBS management.',
-    price: 996,
-    image: '/products/agnisandhi-vati.jpg',
+    price: 450,
+    image: '/gas-empt.png',
     ingredients:
       'Chitrak, Pippali, Shunti, Maricha, Jeeraka, Hingu, Lavana, Ajamoda',
     for: 'Gas, bloating, acidity, constipation, IBS, indigestion, liver sluggishness, and low metabolism.',
   },
   {
     id: '2',
-    name: 'Sandhishool Lepam',
+    name: 'Kasa-Off',
     description:
-      'A potent external herbal paste for chronic joint and muscle pain. Provides deep warmth, reduces inflammation, and improves mobility in arthritic conditions.',
-    price: 1460,
-    image: '/products/sandhishool-lepam.jpg',
+      'A potent respiratory relief formulation for chronic cough, cold, and bronchial congestion. Soothes irritated airways and strengthens lung function naturally.',
+    price: 444,
+    image: '/kasa-off.png',
     ingredients:
-      'Dashamoola, Nirgundi, Rasna, Castor leaf, Eranda, Devadaru, Saindhava Lavana',
-    for: 'Back pain, knee pain, joint stiffness, muscle pain, osteoporosis, cervical spondylosis, and sports injuries.',
+      'Dashamoola, Vasaka, Kantakari, Pippali, Yastimadhu, Haridra, Tulsi',
+    for: 'Chronic cough, cold, bronchitis, chest congestion, wheezing, and seasonal respiratory issues.',
   },
   {
     id: '3',
-    name: 'Immunity Plus Syrup',
+    name: 'Immune It',
     description:
       'A daily immunity booster rooted in classical Ayurveda. Strengthens respiratory health, builds defence against seasonal infections, and supports recovery.',
-    price: 1200,
-    image: '/products/immunity-plus.jpg',
+    price: 348,
+    image: '/immune-it.png',
     ingredients:
       'Ashwagandha, Guduchi, Tulsi, Yashtimadhu, Pippali, Amalaki, Haridra',
     for: 'Frequent colds, cough, sinusitis, allergies, asthma, weak immunity, and post-illness recovery.',
@@ -76,10 +85,49 @@ export const defaultContact: ContactInfo = {
   whatsappNumber: '919177816622',
 };
 
+export const defaultCampImages: CampImage[] = [
+  {
+    id: 'camp-1',
+    url: '/camps/image%201.png',
+    caption: 'Direct Ayurvedic consultations at a community health camp — assessing patients for joint pain, digestive disorders, and lifestyle conditions with traditional pulse diagnosis.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-2',
+    url: '/camps/image2.png',
+    caption: 'Free medical camp in collaboration with a local welfare organisation — offering Ayurvedic health assessments to rural families who cannot access clinical care.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-3',
+    url: '/camps/image%203.png',
+    caption: 'Educating village communities on preventive healthcare — teaching families about daily Ayurvedic routines, seasonal diets, and herbal home remedies for common ailments.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-4',
+    url: '/camps/image%204.png',
+    caption: 'Distribution of herbal medicines and Ayurvedic supplements to underserved communities — ensuring traditional wellness reaches every doorstep in rural Telangana.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-5',
+    url: '/camps/image%205.png',
+    caption: 'Women\'s health focus camp — addressing PCOS, menstrual health, and postnatal care through classical Ayurvedic protocols and lifestyle counselling.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+];
+
 export const defaultData: SiteData = {
   logoUrl: '/Logo-Final-Version.png',
   contact: defaultContact,
   products: defaultProducts,
+  campImages: defaultCampImages,
   leads: [],
   visits: 0,
 };
@@ -95,6 +143,7 @@ export function loadData(): SiteData {
       ...parsed,
       contact: { ...defaultContact, ...parsed.contact },
       products: parsed.products ?? defaultProducts,
+      campImages: parsed.campImages ?? defaultCampImages,
       leads: parsed.leads ?? [],
       visits: parsed.visits ?? 0,
     };
@@ -146,5 +195,28 @@ export function updateProducts(products: Product[]) {
 export function deleteLead(id: string) {
   const data = loadData();
   data.leads = data.leads.filter((l) => l.id !== id);
+  saveData(data);
+}
+
+export function updateCampImages(images: CampImage[]) {
+  const data = loadData();
+  data.campImages = images;
+  saveData(data);
+}
+
+export function addCampImage(image: Omit<CampImage, 'id'>) {
+  const data = loadData();
+  const newImage: CampImage = {
+    ...image,
+    id: 'camp-' + Date.now().toString(36),
+  };
+  data.campImages = [...data.campImages, newImage];
+  saveData(data);
+  return newImage;
+}
+
+export function deleteCampImage(id: string) {
+  const data = loadData();
+  data.campImages = data.campImages.filter((c) => c.id !== id);
   saveData(data);
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Leaf, Users } from 'lucide-react';
 import { loadData, addLead, type Product } from '@/lib/store';
 import { useState, useEffect } from 'react';
 
@@ -19,41 +19,75 @@ function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+    <div className="bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
+      {/* Image */}
       {product.image ? (
-        <div className="w-full h-48 bg-gray-100">
-          <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+        <div className="w-full h-52 sm:h-60 md:h-72 bg-gray-50 flex items-center justify-center p-6 relative group">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
       ) : (
-        <div className="w-full h-48 bg-forest/5 flex items-center justify-center">
+        <div className="w-full h-52 sm:h-60 md:h-72 bg-forest/5 flex items-center justify-center">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
             <path d="M12 2L15 9H22L16 14L18 22L12 17L6 22L8 14L2 9H9L12 2Z" fill="#b8952a" />
           </svg>
         </div>
       )}
+
+      {/* Content */}
       <div className="p-6 md:p-8 flex flex-col flex-1">
-        <div className="flex items-start justify-between mb-2">
-          <h2 className="font-serif text-2xl font-semibold text-forest">{product.name}</h2>
-          <span className="text-lg font-bold text-gold">₹{product.price.toLocaleString()}</span>
+        {/* Name & Price */}
+        <div className="mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-forest tracking-tight">
+            {product.name}
+          </h2>
+          <div className="flex items-center gap-3 mt-2">
+            <span className="text-2xl font-bold text-gold">₹{product.price.toLocaleString()}</span>
+            <span className="text-xs px-2 py-0.5 bg-forest/10 text-forest rounded-full font-medium">
+              Ayurvedic
+            </span>
+          </div>
         </div>
-        <p className="text-sm text-forest/70 leading-relaxed mb-4 flex-1">{product.description}</p>
-        <div className="mb-2">
-          <span className="text-xs font-semibold text-gold uppercase tracking-wide">Key Ingredients</span>
-          <p className="text-xs text-forest/60 mt-1">{product.ingredients}</p>
+
+        {/* Gold divider */}
+        <div className="w-12 h-0.5 bg-gold mb-4" />
+
+        {/* Description */}
+        <p className="text-sm md:text-base text-forest/70 leading-relaxed mb-5">
+          {product.description}
+        </p>
+
+        {/* Ingredients */}
+        <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <Leaf size={14} className="text-gold" />
+            <span className="text-xs font-bold text-gold uppercase tracking-wider">Key Ingredients</span>
+          </div>
+          <p className="text-sm text-forest/70 leading-relaxed">{product.ingredients}</p>
         </div>
-        <div className="mb-6">
-          <span className="text-xs font-semibold text-gold uppercase tracking-wide">Who It's For</span>
-          <p className="text-xs text-forest/60 mt-1">{product.for}</p>
+
+        {/* Who it's for */}
+        <div className="mb-6 p-4 bg-forest/5 rounded-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <Users size={14} className="text-forest" />
+            <span className="text-xs font-bold text-forest uppercase tracking-wider">Who It's For</span>
+          </div>
+          <p className="text-sm text-forest/70 leading-relaxed">{product.for}</p>
         </div>
+
+        {/* CTA */}
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleEnquire}
-          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-semibold rounded-lg hover:bg-forest transition-colors duration-300 mt-auto"
         >
           Enquire on WhatsApp
-          <ArrowRight size={16} />
+          <ArrowRight size={18} />
         </a>
       </div>
     </div>
