@@ -107,9 +107,9 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="order-1 md:order-2 flex justify-center md:justify-end">
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <img src="/Logo-Final-Version.png" alt="Sri Jayanthi" className="w-full h-full object-contain" />
+            <div className="order-1 md:order-2 flex justify-center md:justify-end w-full md:w-auto">
+              <div className="relative w-full h-auto md:w-80 md:h-80">
+                <img src="/Logo-Final-Version.png" alt="Sri Jayanthi" className="w-full h-auto object-contain" />
               </div>
             </div>
           </div>
