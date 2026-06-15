@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --forest: #1a4a2e;
+  --gold: #b8952a;
+  --cream: #ffffff;
+  --parchment: #f5f5f5;
+  --ink: #2c2c2c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+}
+
+.paper-texture {
+  background-color: var(--cream);
+}
+
+.font-serif {
+  font-family: 'Outfit', 'DM Sans', system-ui, sans-serif;
+}
+
+.font-sans {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.gold-border {
+  border: 1px solid var(--gold);
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.forest-bg {
+  background-color: var(--forest);
+}
+
+.parchment-bg {
+  background-color: var(--parchment);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--forest);
+  border-radius: 4px;
+}
+
+/* Announcement bar animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Professional card style */
+.paper-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
