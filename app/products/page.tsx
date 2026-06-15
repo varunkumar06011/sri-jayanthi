@@ -19,32 +19,43 @@ function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <div className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg flex flex-col">
-      <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center mb-4">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L15 9H22L16 14L18 22L12 17L6 22L8 14L2 9H9L12 2Z" fill="#b8952a" />
-        </svg>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+      {product.image ? (
+        <div className="w-full h-48 bg-gray-100">
+          <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+        </div>
+      ) : (
+        <div className="w-full h-48 bg-forest/5 flex items-center justify-center">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15 9H22L16 14L18 22L12 17L6 22L8 14L2 9H9L12 2Z" fill="#b8952a" />
+          </svg>
+        </div>
+      )}
+      <div className="p-6 md:p-8 flex flex-col flex-1">
+        <div className="flex items-start justify-between mb-2">
+          <h2 className="font-serif text-2xl font-semibold text-forest">{product.name}</h2>
+          <span className="text-lg font-bold text-gold">₹{product.price.toLocaleString()}</span>
+        </div>
+        <p className="text-sm text-forest/70 leading-relaxed mb-4 flex-1">{product.description}</p>
+        <div className="mb-2">
+          <span className="text-xs font-semibold text-gold uppercase tracking-wide">Key Ingredients</span>
+          <p className="text-xs text-forest/60 mt-1">{product.ingredients}</p>
+        </div>
+        <div className="mb-6">
+          <span className="text-xs font-semibold text-gold uppercase tracking-wide">Who It's For</span>
+          <p className="text-xs text-forest/60 mt-1">{product.for}</p>
+        </div>
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleEnquire}
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
+        >
+          Enquire on WhatsApp
+          <ArrowRight size={16} />
+        </a>
       </div>
-      <h2 className="font-serif text-2xl font-semibold text-forest mb-3">{product.name}</h2>
-      <p className="text-sm text-forest/70 leading-relaxed mb-4 flex-1">{product.description}</p>
-      <div className="mb-2">
-        <span className="text-xs font-semibold text-gold uppercase tracking-wide">Key Ingredients</span>
-        <p className="text-xs text-forest/60 mt-1">{product.ingredients}</p>
-      </div>
-      <div className="mb-6">
-        <span className="text-xs font-semibold text-gold uppercase tracking-wide">Who It's For</span>
-        <p className="text-xs text-forest/60 mt-1">{product.for}</p>
-      </div>
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={handleEnquire}
-        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
-      >
-        Enquire on WhatsApp
-        <ArrowRight size={16} />
-      </a>
     </div>
   );
 }

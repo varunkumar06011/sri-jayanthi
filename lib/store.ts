@@ -2,6 +2,8 @@ export interface Product {
   id: string;
   name: string;
   description: string;
+  price: number;
+  image: string;
   ingredients: string;
   for: string;
 }
@@ -29,29 +31,74 @@ export interface SiteData {
   visits: number;
 }
 
-const STORAGE_KEY = 'sri_jayanthi_data';
+const STORAGE_KEY = 'sri_jayanthi_data_v2';
 
 export const defaultProducts: Product[] = [
   {
     id: '1',
-    name: 'Kesha Thailam',
-    description: 'A classical hair oil prepared with bhringraj, amla, and sesame base. Used for premature greying, hair fall, and scalp dryness.',
-    ingredients: 'Bhringraj, Amla, Brahmi, Sesame oil, Coconut milk',
-    for: 'Anyone with hair fall, dandruff, or early greying.',
+    name: 'Agnisandhi Vati',
+    description:
+      'A classical Ayurvedic digestive tonic formulated to rekindle digestive fire (Agni), relieve gas, bloating, acidity, and constipation. Supports liver detox and IBS management.',
+    price: 996,
+    image: '/products/agnisandhi-vati.jpg',
+    ingredients:
+      'Chitrak, Pippali, Shunti, Maricha, Jeeraka, Hingu, Lavana, Ajamoda',
+    for: 'Gas, bloating, acidity, constipation, IBS, indigestion, liver sluggishness, and low metabolism.',
   },
   {
     id: '2',
-    name: 'Pain Relief Lepam',
-    description: 'External herbal paste for joint and muscle pain. Gives immediate warmth and relief when applied before a hot pack.',
-    ingredients: 'Dashamoola, Nirgundi, Castor leaf, Rasna, Ajwain',
-    for: 'Back pain, knee pain, sprains, and arthritic joints.',
+    name: 'Sandhishool Lepam',
+    description:
+      'A potent external herbal paste for chronic joint and muscle pain. Provides deep warmth, reduces inflammation, and improves mobility in arthritic conditions.',
+    price: 1460,
+    image: '/products/sandhishool-lepam.jpg',
+    ingredients:
+      'Dashamoola, Nirgundi, Rasna, Castor leaf, Eranda, Devadaru, Saindhava Lavana',
+    for: 'Back pain, knee pain, joint stiffness, muscle pain, osteoporosis, cervical spondylosis, and sports injuries.',
   },
   {
     id: '3',
-    name: 'Skin Glow Lepam',
-    description: 'Face and body pack for hyperpigmentation, acne scars, and uneven skin tone. Brightens without bleaching.',
-    ingredients: 'Sandalwood, Turmeric, Manjistha, Lodhra, Rose water',
-    for: 'Dull skin, acne marks, tan removal, and weekly skin care.',
+    name: 'Immunity Plus Syrup',
+    description:
+      'A daily immunity booster rooted in classical Ayurveda. Strengthens respiratory health, builds defence against seasonal infections, and supports recovery.',
+    price: 1200,
+    image: '/products/immunity-plus.jpg',
+    ingredients:
+      'Ashwagandha, Guduchi, Tulsi, Yashtimadhu, Pippali, Amalaki, Haridra',
+    for: 'Frequent colds, cough, sinusitis, allergies, asthma, weak immunity, and post-illness recovery.',
+  },
+  {
+    id: '4',
+    name: 'Kesha Oli Hair Oil',
+    description:
+      'A nourishing hair oil prepared with bhringraj, amla, and coconut milk base. Revitalises follicles, restores natural colour pigment, and cools the scalp.',
+    price: 1200,
+    image: '/products/kesha-oli.jpg',
+    ingredients:
+      'Bhringraj, Amla, Brahmi, Jatamansi, Neem, Coconut milk, Sesame oil',
+    for: 'Hair fall, premature greying, dandruff, scalp dryness, split ends, and thinning hair.',
+  },
+  {
+    id: '5',
+    name: 'Stree Sanjivani',
+    description:
+      'A comprehensive women\'s health tonic that harmonises hormones, regulates menstrual cycles, and supports reproductive wellness through all life stages.',
+    price: 1200,
+    image: '/products/stree-sanjivani.jpg',
+    ingredients:
+      'Ashoka, Shatavari, Lodhra, Dashamoola, Guduchi, Chandana, Kumari',
+    for: 'PCOS, irregular periods, hormonal imbalance, PMS, menopausal symptoms, uterine health, and white discharge.',
+  },
+  {
+    id: '6',
+    name: 'Shankha Bhasma',
+    description:
+      'A traditional Ayurvedic antacid and digestive aid prepared from purified conch shell ash. Neutralises excess stomach acid and heals gastric lining naturally.',
+    price: 644,
+    image: '/products/shankha-bhasma.jpg',
+    ingredients:
+      'Shankha Bhasma (calcined conch shell), Amalaki, Yastimadhu, Shatavari',
+    for: 'Acidity, heartburn, GERD, gastric ulcer, gastritis, hyperacidity, and burning sensation in chest.',
   },
 ];
 

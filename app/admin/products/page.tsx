@@ -41,6 +41,8 @@ export default function AdminProducts() {
     id: Date.now().toString(36),
     name: '',
     description: '',
+    price: 0,
+    image: '',
     ingredients: '',
     for: '',
   };
@@ -88,7 +90,10 @@ export default function AdminProducts() {
         {data.products.map((product) => (
           <div key={product.id} className="bg-white border border-gray-200 rounded-lg p-5 flex flex-col">
             <div className="flex items-start justify-between mb-3">
-              <h3 className="font-serif text-lg font-semibold text-forest">{product.name}</h3>
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-forest">{product.name}</h3>
+                <span className="text-sm font-bold text-gold">₹{product.price.toLocaleString()}</span>
+              </div>
               <div className="flex gap-2">
                 <button
                   onClick={() => setEditing(product)}
@@ -104,6 +109,9 @@ export default function AdminProducts() {
                 </button>
               </div>
             </div>
+            {product.image && (
+              <img src={product.image} alt={product.name} className="w-full h-32 object-cover rounded-lg mb-3 bg-gray-100" />
+            )}
             <p className="text-sm text-forest/60 mb-3 flex-1">{product.description}</p>
             <div className="text-xs text-forest/50 space-y-1">
               <p><span className="font-medium text-gold">Ingredients:</span> {product.ingredients}</p>
@@ -144,6 +152,29 @@ function ProductForm({
           className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-forest focus:outline-none focus:border-forest"
           placeholder="e.g. Kesha Thailam"
         />
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-forest mb-1">Price (₹)</label>
+          <input
+            type="number"
+            required
+            min={0}
+            value={form.price}
+            onChange={(e) => setForm({ ...form, price: Number(e.target.value) })}
+            className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-forest focus:outline-none focus:border-forest"
+            placeholder="e.g. 1200"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-forest mb-1">Image URL</label>
+          <input
+            value={form.image}
+            onChange={(e) => setForm({ ...form, image: e.target.value })}
+            className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-forest focus:outline-none focus:border-forest"
+            placeholder="/products/image.jpg"
+          />
+        </div>
       </div>
       <div>
         <label className="block text-sm font-medium text-forest mb-1">Description</label>
