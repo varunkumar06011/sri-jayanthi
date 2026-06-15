@@ -1,5 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { Phone, MapPin, Mail } from 'lucide-react';
+import { loadData } from '@/lib/store';
+import { useState, useEffect } from 'react';
 
 const quickLinks = [
   { href: '/services', label: 'Services' },
@@ -9,6 +13,19 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const [contact, setContact] = useState(loadData().contact);
+  const [logoUrl, setLogoUrl] = useState(loadData().logoUrl);
+
+  useEffect(() => {
+    const handler = () => {
+      const data = loadData();
+      setContact(data.contact);
+      setLogoUrl(data.logoUrl);
+    };
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
+
   return (
     <footer className="bg-forest text-cream/90">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -17,7 +34,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/Logo-Final-Version.png"
+                src={logoUrl}
                 alt="Sri Jayanthi"
                 className="h-8 w-auto object-contain"
               />
@@ -65,22 +82,23 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-gold mt-0.5 shrink-0" />
                 <div>
-                  <a href="tel:+917778166222" className="text-sm text-cream/80 hover:text-gold transition-colors">
-                    +91 77781 66222
+                  <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="text-sm text-cream/80 hover:text-gold transition-colors">
+                    {contact.phone}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
                 <span className="text-sm text-cream/70">
-                  Sri Jayanthi Wellbeing Clinic<br />
-                  [Your Address Here]
+                  {contact.address.split('\n').map((line, i) => (
+                    <span key={i}>{line}{i < contact.address.split('\n').length - 1 && <br />}</span>
+                  ))}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-gold mt-0.5 shrink-0" />
-                <a href="mailto:contact@srijayanthi.com" className="text-sm text-cream/70 hover:text-gold transition-colors">
-                  contact@srijayanthi.com
+                <a href={`mailto:${contact.email}`} className="text-sm text-cream/70 hover:text-gold transition-colors">
+                  {contact.email}
                 </a>
               </li>
             </ul>

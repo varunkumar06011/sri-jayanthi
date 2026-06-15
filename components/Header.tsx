@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import { loadData } from '@/lib/store';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -15,6 +16,13 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [logoUrl, setLogoUrl] = useState(loadData().logoUrl);
+
+  useEffect(() => {
+    const handler = () => setLogoUrl(loadData().logoUrl);
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -23,7 +31,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <img
-              src="/Logo-Final-Version.png"
+              src={logoUrl}
               alt="Sri Jayanthi"
               className="h-8 sm:h-10 w-auto object-contain shrink-0"
             />

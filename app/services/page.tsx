@@ -53,8 +53,15 @@ export default function ServicesPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const { loadData, addLead } = require('@/lib/store');
+    const data = loadData();
     const text = `Hi, I'm ${formData.name}. Phone: ${formData.phone}. I'm interested in ${formData.service || 'your services'}. Concern: ${formData.concern}`;
-    window.open(`https://wa.me/919177816622?text=${encodeURIComponent(text)}`, '_blank');
+    addLead({
+      type: 'form_submit',
+      source: '/services',
+      details: `Name: ${formData.name}, Phone: ${formData.phone}, Service: ${formData.service || 'General'}, Concern: ${formData.concern}`,
+    });
+    window.open(`https://wa.me/${data.contact.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (

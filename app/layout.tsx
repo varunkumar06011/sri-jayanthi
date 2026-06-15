@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import VisitTracker from '@/components/VisitTracker';
 
 export const metadata: Metadata = {
   title: 'Sri Jayanthi Wellbeing | Ayurveda • Wellness • Empowerment',
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white min-h-screen flex flex-col">
+        <VisitTracker />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

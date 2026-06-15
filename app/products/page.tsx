@@ -1,30 +1,22 @@
+'use client';
+
 import { ArrowRight } from 'lucide-react';
+import { loadData, addLead, type Product } from '@/lib/store';
+import { useState, useEffect } from 'react';
 
-const products = [
-  {
-    name: 'Kesha Thailam',
-    description: 'A classical hair oil prepared with bhringraj, amla, and sesame base. Used for premature greying, hair fall, and scalp dryness.',
-    ingredients: 'Bhringraj, Amla, Brahmi, Sesame oil, Coconut milk',
-    for: 'Anyone with hair fall, dandruff, or early greying.',
-  },
-  {
-    name: 'Pain Relief Lepam',
-    description: 'External herbal paste for joint and muscle pain. Gives immediate warmth and relief when applied before a hot pack.',
-    ingredients: 'Dashamoola, Nirgundi, Castor leaf, Rasna, Ajwain',
-    for: 'Back pain, knee pain, sprains, and arthritic joints.',
-  },
-  {
-    name: 'Skin Glow Lepam',
-    description: 'Face and body pack for hyperpigmentation, acne scars, and uneven skin tone. Brightens without bleaching.',
-    ingredients: 'Sandalwood, Turmeric, Manjistha, Lodhra, Rose water',
-    for: 'Dull skin, acne marks, tan removal, and weekly skin care.',
-  },
-];
-
-function ProductCard({ product }: { product: typeof products[0] }) {
-  const whatsappLink = `https://wa.me/919177816622?text=${encodeURIComponent(
+function ProductCard({ product }: { product: Product }) {
+  const data = loadData();
+  const whatsappLink = `https://wa.me/${data.contact.whatsappNumber}?text=${encodeURIComponent(
     `Hi, I'm interested in ${product.name}. Please share details.`
   )}`;
+
+  const handleEnquire = () => {
+    addLead({
+      type: 'product_enquiry',
+      source: '/products',
+      details: `Product: ${product.name}`,
+    });
+  };
 
   return (
     <div className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg flex flex-col">
@@ -47,6 +39,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleEnquire}
         className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
       >
         Enquire on WhatsApp
@@ -57,6 +50,15 @@ function ProductCard({ product }: { product: typeof products[0] }) {
 }
 
 export default function ProductsPage() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    setProducts(loadData().products);
+    const handler = () => setProducts(loadData().products);
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
+
   return (
     <div className="pb-16">
       {/* Page Header */}
@@ -74,7 +76,7 @@ export default function ProductsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <ProductCard key={product.name} product={product} />
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg text-center">
