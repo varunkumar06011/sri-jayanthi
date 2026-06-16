@@ -59,13 +59,6 @@ const conditions = [
 export default function HomePage() {
   return (
     <div>
-      {/* Announcement Bar */}
-      <div className="bg-forest text-cream overflow-hidden py-2">
-        <div className="animate-scroll-left whitespace-nowrap inline-block px-4 text-sm">
-          Free spinal health camp this Saturday • New batch of Kesha Thailam now available • Monsoon detox packages open for booking
-        </div>
-      </div>
-
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute top-8 left-4 md:left-12 opacity-5">
