@@ -79,7 +79,7 @@ export default function HomePage() {
               className="block text-4xl sm:text-5xl md:text-6xl font-light text-white mb-4 tracking-wide"
               style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
             >
-              Wellness
+              Wellbeing
             </span>
 
             {/* Decorative vine divider — left aligned */}
