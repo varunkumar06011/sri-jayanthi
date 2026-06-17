@@ -95,7 +95,7 @@ export const defaultCampImages: CampImage[] = [
   },
   {
     id: 'camp-2',
-    url: '/camps/image2.png',
+    url: '/camps/image2.jpg',
     caption: 'Free medical camp in collaboration with a local welfare organisation — offering Ayurvedic health assessments to rural families who cannot access clinical care.',
     location: 'Telangana',
     date: '2025-2026',
