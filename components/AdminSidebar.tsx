@@ -30,7 +30,7 @@ export default function AdminSidebar() {
     <>
       {/* Mobile top bar */}
       <div className="md:hidden flex items-center justify-between bg-forest px-4 py-3 sticky top-0 z-40">
-        <span className="text-cream font-serif font-semibold">Admin Panel</span>
+        <span className="text-cream font-sans font-semibold">Admin Panel</span>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="text-cream">
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -43,7 +43,7 @@ export default function AdminSidebar() {
         } md:block bg-forest text-cream w-full md:w-64 md:min-h-screen flex-shrink-0`}
       >
         <div className="p-6 border-b border-cream/10">
-          <h2 className="font-serif text-xl font-bold text-cream">Sri Jayanthi</h2>
+          <h2 className="font-sans text-xl font-bold text-cream">Sri Jayanthi</h2>
           <p className="text-xs text-cream/60 mt-1">Admin Panel</p>
         </div>
 

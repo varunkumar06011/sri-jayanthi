@@ -31,7 +31,7 @@ export default function AdminDashboard() {
 
   return (
     <div>
-      <h1 className="font-serif text-3xl font-bold text-forest mb-2">Dashboard</h1>
+      <h1 className="font-sans text-3xl font-bold text-forest mb-2">Dashboard</h1>
       <p className="text-forest/60 mb-8">Overview of your website performance.</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h2 className="font-serif text-xl font-semibold text-forest mb-4">Leads Breakdown</h2>
+          <h2 className="font-sans text-xl font-semibold text-forest mb-4">Leads Breakdown</h2>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <span className="text-sm text-forest/70">WhatsApp Clicks</span>
@@ -74,7 +74,7 @@ export default function AdminDashboard() {
         </div>
 
         <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h2 className="font-serif text-xl font-semibold text-forest mb-4">Recent Activity</h2>
+          <h2 className="font-sans text-xl font-semibold text-forest mb-4">Recent Activity</h2>
           {data.leads.slice(0, 5).length === 0 ? (
             <p className="text-sm text-forest/50">No leads yet. Activity will appear here when visitors interact with your site.</p>
           ) : (

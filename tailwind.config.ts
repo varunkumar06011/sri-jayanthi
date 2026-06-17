@@ -10,13 +10,12 @@ const config: Config = {
       colors: {
         forest: '#1a4a2e',
         gold: '#b8952a',
-        cream: '#ffffff',
-        parchment: '#f5f5f5',
+        cream: '#fdf8f0',
+        parchment: '#f5ede0',
         ink: '#2c2c2c',
       },
       fontFamily: {
-        serif: ['Outfit', 'DM Sans', 'system-ui', 'sans-serif'],
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'paper-texture': 'none',

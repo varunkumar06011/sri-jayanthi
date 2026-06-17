@@ -74,7 +74,7 @@ function CampCarousel({ images }: { images: CampImage[] }) {
                 Camp Highlight · {img.date}
               </span>
             </div>
-            <h3 className="font-serif text-xl md:text-2xl font-bold text-cream mb-4 leading-snug">
+            <h3 className="font-sans text-xl md:text-2xl font-bold text-cream mb-4 leading-snug">
               {img.caption}
             </h3>
             <div className="flex items-center gap-4 text-sm text-cream/60 mb-6">
@@ -140,7 +140,7 @@ export default function MedicalCampsPage() {
                 Community Outreach · Andhra Pradesh
               </span>
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
+            <h1 className="font-sans text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
               Taking Ayurveda<br />to the Community
             </h1>
             <p className="text-base md:text-lg text-forest/70 leading-relaxed mb-8 max-w-2xl">
@@ -168,7 +168,7 @@ export default function MedicalCampsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <div className="font-serif text-3xl md:text-4xl font-bold text-gold mb-1">{s.value}</div>
+                <div className="font-sans text-3xl md:text-4xl font-bold text-gold mb-1">{s.value}</div>
                 <div className="text-sm text-cream/70">{s.label}</div>
               </div>
             ))}
@@ -180,7 +180,7 @@ export default function MedicalCampsPage() {
       <section className="py-16 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-forest mb-3">Why We Run Camps</h2>
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Why We Run Camps</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -189,7 +189,7 @@ export default function MedicalCampsPage() {
                 <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center mb-4">
                   <item.icon size={20} className="text-forest" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-forest mb-3">{item.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-forest mb-3">{item.title}</h3>
                 <p className="text-sm text-forest/70 leading-relaxed">{item.text}</p>
               </div>
             ))}
@@ -201,7 +201,7 @@ export default function MedicalCampsPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-forest mb-3">From the Field</h2>
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">From the Field</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
             <p className="text-sm text-forest/60 max-w-xl mx-auto">
               Real consultations. Real patients. Real communities. These are moments from our camps — not staged, not curated.
@@ -254,7 +254,7 @@ export default function MedicalCampsPage() {
       {/* CTA */}
       <section className="py-16 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-forest mb-4">
+          <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-4">
             Want to host a camp in your area?
           </h2>
           <p className="text-forest/60 text-sm mb-6 max-w-lg mx-auto">

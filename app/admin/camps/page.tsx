@@ -53,7 +53,7 @@ export default function AdminCampsPage() {
 
   return (
     <div>
-      <h1 className="font-serif text-3xl font-bold text-forest mb-2">Medical Camps</h1>
+      <h1 className="font-sans text-3xl font-bold text-forest mb-2">Medical Camps</h1>
       <p className="text-forest/60 mb-8">
         Add or remove camp photos shown on the public <strong>/medical-camps</strong> page.
         Paste any hosted image URL or use <code>/camps/filename.jpg</code> for images placed in the public/camps/ folder.
@@ -61,7 +61,7 @@ export default function AdminCampsPage() {
 
       {/* Add New Image Form */}
       <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h2 className="font-serif text-lg font-semibold text-forest mb-5 flex items-center gap-2">
+        <h2 className="font-sans text-lg font-semibold text-forest mb-5 flex items-center gap-2">
           <Plus size={18} className="text-gold" />
           Add New Camp Photo
         </h2>
@@ -145,7 +145,7 @@ export default function AdminCampsPage() {
       {/* Existing Images */}
       <div className="bg-white border border-gray-200 rounded-lg p-6">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="font-serif text-lg font-semibold text-forest">
+          <h2 className="font-sans text-lg font-semibold text-forest">
             Current Photos ({images.length})
           </h2>
           <button onClick={handleResetDefaults} className="text-xs text-red-500 hover:underline">

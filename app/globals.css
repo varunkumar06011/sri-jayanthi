@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
   --forest: #1a4a2e;
   --gold: #b8952a;
-  --cream: #ffffff;
-  --parchment: #f5f5f5;
+  --cream: #fdf8f0;
+  --parchment: #f5ede0;
   --ink: #2c2c2c;
 }
 
@@ -17,21 +17,16 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Outfit', system-ui, sans-serif;
   color: var(--ink);
   background-color: var(--cream);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .paper-texture {
   background-color: var(--cream);
-}
-
-.font-serif {
-  font-family: 'Outfit', 'DM Sans', system-ui, sans-serif;
-}
-
-.font-sans {
-  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .gold-border {
@@ -78,10 +73,40 @@ body {
   animation: scroll-left 20s linear infinite;
 }
 
+/* Ken Burns zoom for slideshow */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 8s ease-out forwards;
+}
+
+/* Progress bar fill for slideshow dots */
+@keyframes progressFill {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.animate-progress-fill {
+  animation: progressFill 4s linear forwards;
+}
+
+/* Bounce scroll chevron */
+@keyframes bounce-scroll {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-bounce-scroll {
+  animation: bounce-scroll 2s ease-in-out infinite;
+}
+
 /* Professional card style */
 .paper-card {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  background: var(--cream);
+  border: 1px solid #ddd0bb;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 4px rgba(90, 60, 20, 0.07);
 }

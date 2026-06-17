@@ -42,7 +42,7 @@ export default function ExperiencePage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-forest mb-4">Experience</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Experience</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
             Numbers matter, but stories matter more. Here is what years of practice look like in real lives.
           </p>
@@ -55,7 +55,7 @@ export default function ExperiencePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 text-center">
             {stats.map((s) => (
               <div key={s.label} className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg">
-                <div className="font-serif text-3xl md:text-5xl font-bold text-gold mb-2">{s.number}</div>
+                <div className="font-sans text-3xl md:text-5xl font-bold text-gold mb-2">{s.number}</div>
                 <div className="text-xs md:text-sm text-forest/60 font-medium uppercase tracking-wide">{s.label}</div>
               </div>
             ))}
@@ -66,7 +66,7 @@ export default function ExperiencePage() {
       {/* Our Story */}
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50 relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="font-serif text-3xl font-bold text-forest mb-6">Our Story</h2>
+          <h2 className="font-sans text-3xl font-bold text-forest mb-6">Our Story</h2>
           <div className="space-y-4 text-forest/70 leading-relaxed">
             <p>
               I started this practice because I saw people suffering from conditions that Ayurveda had already solved centuries ago. 
@@ -93,18 +93,18 @@ export default function ExperiencePage() {
       <section className="py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-forest mb-3">Patient Transformations</h2>
+            <h2 className="font-sans text-3xl font-bold text-forest mb-3">Patient Transformations</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((cs) => (
               <div key={cs.title} className="p-6 md:p-8 paper-card">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-gold font-serif font-bold text-sm">
+                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-gold font-sans font-bold text-sm">
                     {cs.patient.split(',')[0][0]}
                   </div>
                   <div>
-                    <h3 className="font-serif text-lg font-semibold text-forest">{cs.title}</h3>
+                    <h3 className="font-sans text-lg font-semibold text-forest">{cs.title}</h3>
                     <p className="text-xs text-forest/50">{cs.patient}</p>
                   </div>
                 </div>

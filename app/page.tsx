@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowRight, Stethoscope, Package, CalendarCheck } from 'lucide-react';
+import { ArrowRight, Stethoscope, Package, CalendarCheck, ChevronDown } from 'lucide-react';
+import HeroSlideshow from '@/components/HeroSlideshow';
 
 const quickTiles = [
   {
@@ -58,58 +61,123 @@ const conditions = [
 export default function HomePage() {
   return (
     <div>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute top-8 left-4 md:left-12 opacity-5">
-          <img src="/Logo-Final-Version.png" alt="" className="w-32 h-auto" />
-        </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="order-2 md:order-1 text-center md:text-left">
-              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-full">
-                <span className="w-2 h-2 rounded-full bg-gold" />
-                <span className="text-xs font-medium text-forest tracking-wide uppercase">
-                  Ayurveda • Wellness • Empowerment
-                </span>
-              </div>
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-forest leading-tight mb-6">
-                Ancient healing.<br />
-                Real results.<br />
-                Right here.
-              </h1>
-              <p className="text-base md:text-lg text-forest/70 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-                We combine classical Ayurvedic knowledge with honest, practical care.
-                Our focus is simple: treat the root, teach you to stay well, and never make promises we cannot keep.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                <a
-                  href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream font-medium rounded-sm hover:bg-forest transition-colors"
-                >
-                  Book Consultation
-                  <ArrowRight size={18} />
-                </a>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-forest text-forest font-medium rounded-sm hover:bg-forest hover:text-cream transition-colors"
-                >
-                  Explore Services
-                </Link>
-              </div>
+      {/* Hero — full-width Charaka-style banner */}
+      <section className="relative min-h-[45vh] sm:min-h-[55vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background slideshow */}
+        <HeroSlideshow />
+
+        {/* Left-aligned content overlay */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 md:px-14 py-10">
+          <div className="max-w-lg">
+            <h1
+              className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-1"
+              style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+            >
+              Sri Jayanthi
+            </h1>
+            <span
+              className="block text-4xl sm:text-5xl md:text-6xl font-light text-white mb-4 tracking-wide"
+              style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+            >
+              Wellness
+            </span>
+
+            {/* Decorative vine divider — left aligned */}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-px bg-white/50" />
+              <svg viewBox="0 0 120 20" fill="none" className="w-16 h-4 text-white/50">
+                <path d="M10 10 Q20 2 30 10 Q40 18 50 10 Q60 2 70 10 Q80 18 90 10 Q100 2 110 10" stroke="currentColor" strokeWidth="1.2" fill="none" />
+                <circle cx="60" cy="10" r="2.5" fill="currentColor" />
+              </svg>
             </div>
-            <div className="order-1 md:order-2 flex justify-center md:justify-end w-full md:w-auto">
-              <div className="relative w-full h-auto md:w-80 md:h-80">
-                <img src="/Logo-Final-Version.png" alt="Sri Jayanthi" className="w-full h-auto object-contain" />
-              </div>
+
+            <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-sm" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+              A natural approach to better health.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
+                style={{ textShadow: 'none' }}
+              >
+                Book Consultation
+                <ArrowRight size={16} />
+              </a>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors"
+                style={{ textShadow: 'none' }}
+              >
+                Explore Services
+              </Link>
             </div>
           </div>
+        </div>
+
+        {/* Scroll down chevron */}
+        <a
+          href="#quick-tiles"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
+        >
+          <ChevronDown size={28} className="animate-bounce-scroll" />
+        </a>
+      </section>
+
+      {/* Welcome Section */}
+      <section className="py-16 md:py-24 border-t border-[#e8dcc8]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Logo icon */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/SJ.cdr.png"
+              alt="Sri Jayanthi"
+              className="h-14 w-auto object-contain mix-blend-multiply opacity-80"
+            />
+          </div>
+
+          {/* Welcome line */}
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gold mb-3 tracking-wide">
+            Welcome to an Incredible Ayurveda Journey
+          </p>
+
+          {/* Main headline */}
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
+            Experience the Highest Standard of Authentic Ayurveda
+          </h2>
+
+          {/* Tagline pill */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-forest text-cream text-xs sm:text-sm font-medium tracking-wide mb-8">
+            <span>Advanced Panchakarma</span>
+            <span className="w-1 h-1 rounded-full bg-gold" />
+            <span>Precision Diagnosis</span>
+            <span className="w-1 h-1 rounded-full bg-gold" />
+            <span>Transformative Healing</span>
+          </div>
+
+          {/* Body text */}
+          <p className="text-sm md:text-base text-forest/80 leading-relaxed mb-8 max-w-2xl mx-auto">
+            At <strong className="text-forest">Sri Jayanthi Wellbeing</strong>, we bridge the gap between ancient wisdom and honest, practical care.
+            We do not just offer wellness — we provide classical Ayurvedic treatment rooted in authentic texts,
+            designed to reverse chronic spine and skin conditions and restore systemic balance.
+            With years of clinical excellence across Telangana, our protocols are strictly
+            <strong className="text-forest"> personalised, outcome-driven, and transformative.</strong>
+          </p>
+
+          {/* More About Us link */}
+          <Link
+            href="/about"
+            className="inline-block text-sm text-gold hover:text-forest underline underline-offset-4 decoration-gold/50 hover:decoration-forest transition-colors"
+          >
+            More About Us
+          </Link>
         </div>
       </section>
 
       {/* Quick Access Tiles */}
-      <section className="py-10 md:py-14 border-t border-gray-100">
+      <section className="py-10 md:py-14 border-t border-[#e8dcc8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {quickTiles.map((tile) => (
@@ -121,7 +189,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center mb-4 group-hover:bg-forest group-hover:text-cream transition-colors">
                   <tile.icon size={22} className="text-forest group-hover:text-cream" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-forest mb-2">{tile.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-forest mb-2">{tile.title}</h3>
                 <p className="text-sm text-forest/60">{tile.description}</p>
               </Link>
             ))}
@@ -130,10 +198,10 @@ export default function HomePage() {
       </section>
 
       {/* Why Sri Jayanthi? */}
-      <section className="py-16 md:py-24 border-t border-gray-100">
+      <section className="py-16 md:py-24 border-t border-[#e8dcc8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-forest mb-3">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">
               Why Sri Jayanthi?
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
@@ -142,7 +210,7 @@ export default function HomePage() {
             {pillars.map((p) => (
               <div key={p.title} className="relative p-6 md:p-8 paper-card">
                 <div className="absolute -top-3 left-6 w-6 h-6 bg-gold rounded-full" />
-                <h3 className="font-serif text-xl font-semibold text-forest mt-2 mb-3">{p.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-forest mt-2 mb-3">{p.title}</h3>
                 <p className="text-sm text-forest/70 leading-relaxed">{p.text}</p>
               </div>
             ))}
@@ -151,10 +219,10 @@ export default function HomePage() {
       </section>
 
       {/* Conditions We Treat */}
-      <section className="py-16 md:py-24 border-t border-gray-100 bg-gray-50">
+      <section className="py-16 md:py-24 border-t border-[#e8dcc8] bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-forest mb-3">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">
               Conditions We Treat
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
@@ -162,7 +230,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {conditions.map((c) => (
               <div key={c.title} className="p-6 md:p-8 paper-card">
-                <h3 className="font-serif text-xl font-semibold text-forest mb-2">{c.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-forest mb-2">{c.title}</h3>
                 <p className="text-xs font-medium text-gold uppercase tracking-wide mb-4">{c.items}</p>
                 <p className="text-sm text-forest/70 leading-relaxed">{c.text}</p>
               </div>

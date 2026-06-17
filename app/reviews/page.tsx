@@ -45,7 +45,7 @@ export default function ReviewsPage() {
     <div className="pb-16">
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-forest mb-4">Reviews</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Reviews</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
             Real words from real patients. No editing, no exaggeration.
           </p>
@@ -62,7 +62,7 @@ export default function ReviewsPage() {
               &ldquo;{featured.quote}&rdquo;
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest font-serif font-bold">
+              <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest font-sans font-bold">
                 {featured.name[0]}
               </div>
               <div>
@@ -77,7 +77,7 @@ export default function ReviewsPage() {
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-2xl font-bold text-forest mb-3">What Patients Say</h2>
+            <h2 className="font-sans text-2xl font-bold text-forest mb-3">What Patients Say</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -105,7 +105,7 @@ export default function ReviewsPage() {
 
       <section className="py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl font-bold text-forest mb-3">Your Story Could Help Someone Else</h2>
+          <h2 className="font-sans text-2xl font-bold text-forest mb-3">Your Story Could Help Someone Else</h2>
           <p className="text-sm text-forest/60 mb-6">
             If you have been treated at Sri Jayanthi, sharing your experience helps others take the first step.
           </p>

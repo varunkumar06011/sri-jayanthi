@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-forest mb-4">About</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">About</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
             The people and the purpose behind Sri Jayanthi Wellbeing.
           </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="md:col-span-2">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-forest mb-2">Dr. [Founder Name]</h2>
+              <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-2">Dr. [Founder Name]</h2>
               <p className="text-sm text-gold font-medium mb-6">BAMS, MD (Ayurveda) | Panchakarma Specialist</p>
               <div className="space-y-4 text-sm text-forest/70 leading-relaxed">
                 <p>
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="flex justify-center mb-6">
             <img src="/Logo-Final-Version.png" alt="" className="w-20 h-auto opacity-40" />
           </div>
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-forest mb-4">Our Mission</h2>
+          <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-4">Our Mission</h2>
           <p className="text-forest/70 leading-relaxed">
             To make authentic Ayurvedic healthcare accessible, honest, and effective. 
             We believe that true wellness comes from understanding your own body, not depending on a doctor forever. 
@@ -79,7 +79,7 @@ export default function AboutPage() {
       {/* Clinic Origin */}
       <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-2xl font-bold text-forest mb-6">How the Clinic Started</h2>
+          <h2 className="font-sans text-2xl font-bold text-forest mb-6">How the Clinic Started</h2>
           <div className="space-y-4 text-sm text-forest/70 leading-relaxed">
             <p>
               Sri Jayanthi began as a small consultation room in 2009. I had just completed my post-graduation and wanted 
@@ -100,7 +100,7 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-2xl font-bold text-forest mb-8 text-center">The Team</h2>
+          <h2 className="font-sans text-2xl font-bold text-forest mb-8 text-center">The Team</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { role: 'Ayurvedic Doctor', desc: 'Patient consultations, diagnosis, and treatment planning.' },
@@ -108,10 +108,10 @@ export default function AboutPage() {
               { role: 'Pharmacy Assistant', desc: 'Medicine preparation, dispensing, and inventory.' },
             ].map((member, i) => (
               <div key={i} className="p-6 bg-white border border-gray-200 rounded-lg text-center">
-                <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center mx-auto mb-4 text-forest font-serif font-bold text-xl">
+                <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center mx-auto mb-4 text-forest font-sans font-bold text-xl">
                   {member.role[0]}
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-forest mb-2">{member.role}</h3>
+                <h3 className="font-sans text-lg font-semibold text-forest mb-2">{member.role}</h3>
                 <p className="text-sm text-forest/60">{member.desc}</p>
               </div>
             ))}

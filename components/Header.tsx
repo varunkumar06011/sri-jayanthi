@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="md:sticky md:top-0 z-50 bg-[#fdf8f0]/95 backdrop-blur-sm border-b border-[#e8dcc8]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -34,13 +34,13 @@ export default function Header() {
             <img
               src={logoUrl}
               alt="Sri Jayanthi"
-              className="h-8 sm:h-10 w-auto object-contain shrink-0"
+              className="h-10 sm:h-14 w-auto object-contain shrink-0 mix-blend-multiply"
             />
             <div className="flex flex-col min-w-0">
-              <span className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-forest leading-tight truncate">
+              <span className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-forest leading-tight truncate">
                 Sri Jayanthi
               </span>
-              <span className="text-[10px] md:text-xs tracking-widest text-gold uppercase font-sans hidden sm:block">
+              <span className="text-[10px] md:text-xs tracking-[0.2em] text-[#b8952a] uppercase font-sans hidden sm:block">
                 Wellbeing
               </span>
             </div>
@@ -83,14 +83,14 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200">
+          <div className="md:hidden pb-4 border-t border-[#e8dcc8]">
             <nav className="flex flex-col gap-1 mt-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-3 py-2.5 text-forest/80 hover:text-gold hover:bg-gray-100 rounded-sm transition-colors"
+                  className="px-3 py-2.5 text-forest/80 hover:text-gold hover:bg-[#f5ede0] rounded-sm transition-colors"
                 >
                   {link.label}
                 </Link>

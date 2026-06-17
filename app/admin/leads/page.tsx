@@ -48,7 +48,7 @@ export default function AdminLeads() {
     <div>
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-forest">Leads</h1>
+          <h1 className="font-sans text-3xl font-bold text-forest">Leads</h1>
           <p className="text-forest/60">Visitors who clicked WhatsApp or submitted forms.</p>
         </div>
         <button

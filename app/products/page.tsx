@@ -41,7 +41,7 @@ function ProductCard({ product }: { product: Product }) {
       <div className="p-6 md:p-8 flex flex-col flex-1">
         {/* Name & Price */}
         <div className="mb-4">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-forest tracking-tight">
+          <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest tracking-tight">
             {product.name}
           </h2>
           <div className="flex items-center gap-3 mt-2">
@@ -109,7 +109,7 @@ export default function ProductsPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-forest mb-4">Products</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Products</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
             Handmade, small-batch Ayurvedic preparations. No synthetic fragrances, no preservatives beyond what nature provides.
           </p>

@@ -38,7 +38,7 @@ export default function Footer() {
                 alt="Sri Jayanthi"
                 className="h-8 w-auto object-contain"
               />
-              <span className="font-serif text-xl font-semibold text-cream">Sri Jayanthi</span>
+              <span className="font-sans text-xl font-semibold text-cream">Sri Jayanthi</span>
             </div>
             <p className="text-sm text-cream/70 leading-relaxed mb-4">
               Ayurveda • Wellness • Empowerment
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-gold mb-4">Quick Links</h3>
+            <h3 className="font-sans text-lg font-semibold text-gold mb-4">Quick Links</h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-gold mb-4">Contact</h3>
+            <h3 className="font-sans text-lg font-semibold text-gold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-gold mt-0.5 shrink-0" />

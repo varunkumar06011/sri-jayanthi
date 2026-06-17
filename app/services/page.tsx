@@ -69,7 +69,7 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-forest mb-4">Services</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Services</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
             Everything we offer is grounded in classical Ayurvedic texts and adapted to modern lifestyles.
           </p>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 className="w-full flex items-center justify-between p-5 md:p-8 text-left hover:bg-gray-50 transition-colors gap-4"
               >
                 <div className="min-w-0">
-                  <h2 className="font-serif text-xl md:text-2xl font-semibold text-forest">{svc.title}</h2>
+                  <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest">{svc.title}</h2>
                   <p className="text-sm text-forest/60 mt-1">{svc.short}</p>
                 </div>
                 {expanded === svc.id ? (
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                   <div className="grid md:grid-cols-2 gap-4 mt-4">
                     {svc.subTreatments.map((sub) => (
                       <div key={sub.name} className="p-4 bg-gray-50 rounded-lg">
-                        <h3 className="font-serif text-lg font-semibold text-forest mb-1">{sub.name}</h3>
+                        <h3 className="font-sans text-lg font-semibold text-forest mb-1">{sub.name}</h3>
                         <p className="text-sm text-forest/60 leading-relaxed">{sub.desc}</p>
                       </div>
                     ))}
@@ -127,7 +127,7 @@ export default function ServicesPage() {
       <section id="camps" className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-forest mb-3">Medical Camps</h2>
+            <h2 className="font-sans text-3xl font-bold text-forest mb-3">Medical Camps</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
             <p className="text-sm text-forest/60 mt-4 max-w-xl mx-auto">
               We conduct regular camps in nearby villages and towns. Free basic consultation. Medicines at subsidized rates.
@@ -136,7 +136,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {camps.map((camp) => (
               <div key={camp.date} className="p-6 bg-white border border-gray-200 rounded-lg">
-                <div className="text-gold font-serif text-lg font-semibold mb-2">{camp.date}</div>
+                <div className="text-gold font-sans text-lg font-semibold mb-2">{camp.date}</div>
                 <div className="text-sm text-forest/80 font-medium mb-1">{camp.location}</div>
                 <div className="text-xs text-forest/50 uppercase tracking-wide">{camp.focus}</div>
               </div>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
       <section className="py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-10">
-            <h2 className="font-serif text-2xl font-semibold text-forest mb-2">Ask About a Service</h2>
+            <h2 className="font-sans text-2xl font-semibold text-forest mb-2">Ask About a Service</h2>
             <p className="text-sm text-forest/60 mb-6">Fill this and we will connect with you on WhatsApp.</p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

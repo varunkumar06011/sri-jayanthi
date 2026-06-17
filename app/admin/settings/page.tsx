@@ -29,13 +29,13 @@ export default function AdminSettings() {
 
   return (
     <div>
-      <h1 className="font-serif text-3xl font-bold text-forest mb-2">Settings</h1>
+      <h1 className="font-sans text-3xl font-bold text-forest mb-2">Settings</h1>
       <p className="text-forest/60 mb-8">Update logo and contact details. Changes reflect instantly on the website.</p>
 
       <div className="max-w-2xl space-y-6">
         {/* Logo */}
         <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h2 className="font-serif text-lg font-semibold text-forest mb-4">Logo</h2>
+          <h2 className="font-sans text-lg font-semibold text-forest mb-4">Logo</h2>
           <div className="flex items-center gap-6">
             <img
               src={data.logoUrl}
@@ -57,7 +57,7 @@ export default function AdminSettings() {
 
         {/* Contact */}
         <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h2 className="font-serif text-lg font-semibold text-forest mb-4">Contact Information</h2>
+          <h2 className="font-sans text-lg font-semibold text-forest mb-4">Contact Information</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-forest mb-1">Phone Number</label>

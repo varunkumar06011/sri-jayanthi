@@ -53,7 +53,7 @@ export default function AdminProducts() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-forest">Products</h1>
+          <h1 className="font-sans text-3xl font-bold text-forest">Products</h1>
           <p className="text-forest/60">Manage products displayed on your website.</p>
         </div>
         <button
@@ -68,7 +68,7 @@ export default function AdminProducts() {
       {(isAdding || editing) && (
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-lg font-semibold text-forest">
+            <h2 className="font-sans text-lg font-semibold text-forest">
               {isAdding ? 'Add Product' : 'Edit Product'}
             </h2>
             <button
@@ -91,7 +91,7 @@ export default function AdminProducts() {
           <div key={product.id} className="bg-white border border-gray-200 rounded-lg p-5 flex flex-col">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h3 className="font-serif text-lg font-semibold text-forest">{product.name}</h3>
+                <h3 className="font-sans text-lg font-semibold text-forest">{product.name}</h3>
                 <span className="text-sm font-bold text-gold">₹{product.price.toLocaleString()}</span>
               </div>
               <div className="flex gap-2">
