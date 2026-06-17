@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us — Ayurvedic Doctor in Telangana',
+  description: 'Meet the Ayurvedic specialist behind Sri Jayanthi Wellbeing, serving patients across Telangana with authentic Panchakarma and classical Ayurvedic care.',
+  alternates: { canonical: '/about' },
+};
 
 export default function AboutPage() {
   return (

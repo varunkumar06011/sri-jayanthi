@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import { Star, ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Patient Reviews — Sri Jayanthi Wellbeing Telangana',
+  description: 'Read real patient reviews of Ayurvedic treatment for back pain, sciatica, eczema, and psoriasis at Sri Jayanthi Wellbeing, Telangana.',
+  alternates: { canonical: '/reviews' },
+};
 
 const testimonials = [
   {

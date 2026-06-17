@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Experience — Ayurvedic Treatment Results in Telangana',
+  description: 'Real patient outcomes from Ayurvedic treatment for spine, skin, and lifestyle conditions, from our clinic serving patients across Telangana.',
+  alternates: { canonical: '/experience' },
+};
 
 const stats = [
   { number: '15+', label: 'Years in Practice' },

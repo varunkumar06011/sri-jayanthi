@@ -25,7 +25,7 @@ const whyWeCamp = [
   {
     icon: MapPin,
     title: 'Rooted in the Region',
-    text: "We focus on Andhra Pradesh's rural pockets where lifestyle diseases go undiagnosed for years. Our work is local, consistent, and deeply committed.",
+    text: "We focus on Telangana's rural pockets where lifestyle diseases go undiagnosed for years. Our work is local, consistent, and deeply committed.",
   },
 ];
 

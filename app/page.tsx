@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { ArrowRight, Stethoscope, Package, CalendarCheck } from 'lucide-react';
-import PeacockWalk from '@/components/PeacockWalk';
 
 const quickTiles = [
   {
@@ -183,10 +182,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Peacock Walk */}
-      <section className="border-t border-gray-100 bg-gray-50 relative">
-        <PeacockWalk />
-      </section>
     </div>
   );
 }
