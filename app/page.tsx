@@ -46,10 +46,11 @@ const pillars = [
 export default function HomePage() {
   return (
     <div>
-      {/* Hero */}
-      <section className="relative min-h-[45vh] sm:min-h-[55vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      {/* Hero — unified full-bleed slideshow + text overlay */}
+      <section className="relative min-h-[62vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center overflow-hidden">
         <HeroSlideshow />
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 md:px-14 py-10">
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 md:px-14 py-14 sm:py-16">
           <div className="max-w-lg">
             <h1
               className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-1"
@@ -70,7 +71,10 @@ export default function HomePage() {
                 <circle cx="60" cy="10" r="2.5" fill="currentColor" />
               </svg>
             </div>
-            <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-sm" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+            <p
+              className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-sm"
+              style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}
+            >
               Preventive and Curative treatment through proven wisdom.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -79,7 +83,6 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
-                style={{ textShadow: 'none' }}
               >
                 Book Consultation
                 <ArrowRight size={16} />
@@ -87,16 +90,16 @@ export default function HomePage() {
               <Link
                 href="/services"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors"
-                style={{ textShadow: 'none' }}
               >
                 Explore Services
               </Link>
             </div>
           </div>
         </div>
+
         <a
           href="#philosophy"
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
         >
           <ChevronDown size={28} className="animate-bounce-scroll" />
         </a>
@@ -131,11 +134,11 @@ export default function HomePage() {
           </div>
           <div className="space-y-4 text-sm md:text-base text-forest/80 leading-relaxed mb-8 max-w-3xl mx-auto text-left">
             <p>
-              <span className="font-semibold text-forest">समदोषः समाग्निश्च समधातु मलक्रियाः।<br />प्रसन्नात्मेन्द्रिय मनः स्वस्थ इत्यभिधीयते॥</span>
+              <span className="font-semibold text-forest">समदोषः समाग्निश्च समधातुमलक्रियाः।<br />प्रसन्नात्मेन्द्रियमनाः स्वस्थ इत्यभिधीयते॥</span>
             </p>
             <p className="italic text-forest/70">
-              Samadoṣaḥ samāgniśca samadhātu malakriyāḥ<br />
-              Prasannātmendriya manaḥ svastha ityabhidhīyate
+              Samadoṣaḥ samāgniśca samadhātumalakriyāḥ<br />
+              Prasannātmendriyamanāḥ svastha ityabhidhīyate
             </p>
             <p>
               Ayurveda views health as far more than the mere absence of disease. It is a state of complete harmony in which the Doshas (Vata, Pitta, and Kapha) are in balance, Agni (the digestive and metabolic fire) functions optimally, the Dhatus (body tissues) are well nourished, and the Malas (natural waste elimination processes) are maintained efficiently.

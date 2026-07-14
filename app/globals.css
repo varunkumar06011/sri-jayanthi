@@ -74,8 +74,19 @@ body {
   100% { transform: scale(1.08); }
 }
 
+@keyframes kenBurnsMobile {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+
 .animate-ken-burns {
-  animation: kenBurns 8s ease-out forwards;
+  animation: kenBurnsMobile 3s ease-out forwards;
+}
+
+@media (min-width: 640px) {
+  .animate-ken-burns {
+    animation: kenBurns 3s ease-out forwards;
+  }
 }
 
 /* Progress bar fill for slideshow dots */
