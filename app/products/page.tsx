@@ -1,8 +1,51 @@
 'use client';
 
-import { ArrowRight, Leaf, Users } from 'lucide-react';
-import { loadData, addLead, type Product } from '@/lib/store';
 import { useState, useEffect } from 'react';
+import { ArrowRight, Leaf, Users, MessageCircle } from 'lucide-react';
+import { loadData, addLead, type Product } from '@/lib/store';
+
+const classicalProducts = [
+  {
+    name: 'Guduchyadhi Rasayanam',
+    benefit: 'For rejuvenation of memory and cognition',
+    description: 'Guduchyadhi Rasayanam is useful in memory enhancement and has anti-stress, anti-depressant and anxiolytic properties. It is helpful in treating memory impairment that occurs as part of normal aging process.',
+  },
+  {
+    name: 'Kalyanakavaleham Churnam Tablets',
+    benefit: 'Effective in Speech disorders and promotes intelligence',
+    description: 'Kalyanakavaleh is useful in Pharingitis, Laryngitis, Hoarseness of voice, and slurred speech. It is useful in promoting memory and intelligence.',
+  },
+  {
+    name: 'Sapthamrutha Lauham',
+    benefit: 'Helps improve Eye Health',
+    description: 'Sapthamrutha Lauham helps in improving vision by giving strength to the eyes. It is useful in burning and itching of the eyes due to constant exposure to electronics. It is used in the treatment of gastritis, abdominal colic, nausea, headache, fatigue, and eye infections. It is also used in treating anaemia and low haemoglobin levels.',
+  },
+  {
+    name: 'Vasa',
+    benefit: 'Helps relieve respiratory congestion',
+    description: 'Vasa helps in relieving chest congestion and reducing bronchial inflammation, suppressing cough, helping in discharge of phlegm, reducing thirst, aiding respiratory function, and combating epistaxis.',
+  },
+  {
+    name: 'Ashwagandha',
+    benefit: 'Helps in Stress, Anxiety and General Wellness',
+    description: 'Ashwagandha is a rasayana known to have anti-inflammatory, anti-stress, antioxidant, immunomodulatory, hemopoietic, and rejuvenating properties. It is a safe natural supplement with a positive influence on the endocrine, cardiopulmonary, and central nervous systems. It relieves stress, anxiety, enhances general immunity, and helps improve quality of sleep. It is advisable to be taken under Physician’s supervision in case of pregnancy, nursing, or any medical conditions that require special attention and care.',
+  },
+  {
+    name: 'Yashtimadhu',
+    benefit: 'Helps improve Gastric and Respiratory Wellness',
+    description: 'Yashtimadhu has multiple medicinal properties such as promoting vision, general strength, complexion, hair growth, and good voice. It is useful in reducing nausea and thirst, and improving general immunity. Yashtimadhu helps in digestive and respiratory disorders, acts as an expectorant relieving cough, and is useful in treating stomatitis and as an adjunct therapy in mucositis.',
+  },
+  {
+    name: 'Shatavari',
+    benefit: 'Promotes Women’s Wellness',
+    description: 'Shatavari is useful in improving general immunity. It helps combat hormonal imbalances, promotes female reproductive health, and reduces symptoms of menopause. It is useful in anxiety and depression, and is used as a galactogogue.',
+  },
+  {
+    name: 'Triphala',
+    benefit: 'Promotes overall wellness and rejuvenation',
+    description: 'Triphala helps relieve constipation, supports healthy digestion and gut health, aids natural detoxification thus enhancing immunity, and helps in weight management when combined with proper diet and exercise.',
+  },
+];
 
 function ProductCard({ product }: { product: Product }) {
   const data = loadData();
@@ -20,7 +63,6 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
-      {/* Image */}
       {product.image ? (
         <div className="w-full h-52 sm:h-60 md:h-72 bg-gray-50 flex items-center justify-center p-6 relative group">
           <img
@@ -36,10 +78,7 @@ function ProductCard({ product }: { product: Product }) {
           </svg>
         </div>
       )}
-
-      {/* Content */}
       <div className="p-6 md:p-8 flex flex-col flex-1">
-        {/* Name & Price */}
         <div className="mb-4">
           <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest tracking-tight">
             {product.name}
@@ -51,16 +90,10 @@ function ProductCard({ product }: { product: Product }) {
             </span>
           </div>
         </div>
-
-        {/* Gold divider */}
         <div className="w-12 h-0.5 bg-gold mb-4" />
-
-        {/* Description */}
         <p className="text-sm md:text-base text-forest/70 leading-relaxed mb-5">
           {product.description}
         </p>
-
-        {/* Ingredients */}
         <div className="mb-4 p-4 bg-gray-50 rounded-lg">
           <div className="flex items-center gap-2 mb-2">
             <Leaf size={14} className="text-gold" />
@@ -68,17 +101,13 @@ function ProductCard({ product }: { product: Product }) {
           </div>
           <p className="text-sm text-forest/70 leading-relaxed">{product.ingredients}</p>
         </div>
-
-        {/* Who it's for */}
         <div className="mb-6 p-4 bg-forest/5 rounded-lg">
           <div className="flex items-center gap-2 mb-2">
             <Users size={14} className="text-forest" />
-            <span className="text-xs font-bold text-forest uppercase tracking-wider">Who It's For</span>
+            <span className="text-xs font-bold text-forest uppercase tracking-wider">Who It&apos;s For</span>
           </div>
           <p className="text-sm text-forest/70 leading-relaxed">{product.for}</p>
         </div>
-
-        {/* CTA */}
         <a
           href={whatsappLink}
           target="_blank"
@@ -107,28 +136,112 @@ export default function ProductsPage() {
   return (
     <div className="pb-16">
       {/* Page Header */}
-      <section className="py-12 md:py-20 border-b border-gray-100">
+      <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Products</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
-            Handmade, small-batch Ayurvedic preparations. No synthetic fragrances, no preservatives beyond what nature provides.
+          <p className="text-forest/60 max-w-3xl mx-auto">
+            Authentic Ayurvedic formulations rooted in classical wisdom and manufactured with uncompromising quality.
           </p>
         </div>
       </section>
 
-      {/* Product Grid */}
+      {/* Introduction */}
       <section className="py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-          <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg text-center">
-            <p className="text-sm text-forest/70">
-              More products coming soon. If you are looking for something specific, message us.
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 text-sm md:text-base text-forest/80 leading-relaxed text-center">
+            <p>
+              Our commitment to making holistic wellness accessible to everyone is rooted in the timeless wisdom of Ayurveda and enriched by over few decades of clinical experience and knowledge shared by renowned experts in the field. Guided by this legacy, we have established our pharmacy with a sole purpose to develop authentic, high quality Ayurvedic formulations that support preventive healthcare and overall wellbeing.
+            </p>
+            <p>
+              Every product is manufactured by adhering to stringent quality standards and standardized processes to ensure consistency, safety, and efficacy. We carefully source premium quality herbs and raw materials, employing validated manufacturing practices that preserve their natural potency and therapeutic value.
+            </p>
+            <p>
+              Our thoughtfully formulated products are designed to complement a healthy lifestyle and may be used as supportive adjuncts to healthcare under professional guidance. They promote digestive and gut health, strengthen immunity, support the body&apos;s natural response to allergies and immune challenges, and enhance overall vitality and resilience against infections.
+            </p>
+            <p className="font-semibold text-forest">
+              At the heart of every formulation is our unwavering commitment to authenticity, quality, and the enduring principles of Ayurveda — delivering simple, effective, and trusted wellness solutions for healthier living.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Proprietary Products */}
+      <section className="py-10 md:py-14 border-t border-[#e8dcc8] bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Proprietary Medicines</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto" />
+          </div>
+          {products.length > 0 ? (
+            <div className="grid md:grid-cols-3 gap-8">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-10 text-forest/60">
+              <p className="text-sm md:text-base mb-4">Proprietary product details will appear here. For a detailed brochure, reach out to us.</p>
+              <a
+                href="https://wa.me/919177816622?text=Hi, I'd like to request the Proprietary Medicines brochure."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream font-medium rounded-sm hover:bg-forest transition-colors"
+              >
+                <MessageCircle size={18} />
+                Request Brochure on WhatsApp
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Classical Products */}
+      <section className="py-16 md:py-24 border-t border-[#e8dcc8]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Classical Products</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto" />
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {classicalProducts.map((product, index) => (
+              <div key={product.name} className="p-6 md:p-8 paper-card flex flex-col">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center shrink-0 text-forest font-sans font-bold">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-xl font-semibold text-forest">{product.name}</h3>
+                    <p className="text-sm text-gold font-medium flex items-center gap-1 mt-1">
+                      <Leaf size={12} />
+                      {product.benefit}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-forest/70 leading-relaxed flex-1">{product.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 border-t border-[#e8dcc8] bg-forest">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-sans text-2xl md:text-3xl font-bold text-cream mb-4">
+            Looking for a specific product?
+          </h2>
+          <p className="text-cream/80 mb-8 max-w-2xl mx-auto">
+            Get in touch with us on WhatsApp for product availability, dosage guidance, and professional advice.
+          </p>
+          <a
+            href="https://wa.me/919177816622?text=Hi, I'd like to know more about your Ayurvedic products."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream font-medium rounded-sm hover:bg-cream hover:text-forest transition-colors"
+          >
+            Enquire on WhatsApp
+            <ArrowRight size={18} />
+          </a>
         </div>
       </section>
     </div>

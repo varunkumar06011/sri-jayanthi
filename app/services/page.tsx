@@ -5,48 +5,87 @@ import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 const services = [
   {
+    id: 'consultations',
+    title: 'Consultations',
+    short: 'Personalised Ayurvedic diagnosis and treatment plans for a wide range of health concerns.',
+    items: [
+      'Musculoskeletal Issues (Back pain, Sciatica)',
+      'Neurological Disorders',
+      'Gut Health',
+      'Dermatological Issues',
+      'Lifestyle & Chronic Disease Management',
+      'Women’s Health',
+    ],
+  },
+  {
     id: 'panchakarma',
     title: 'Panchakarma',
-    short: 'The five classical detox and rejuvenation procedures of Ayurveda, done properly.',
-    subTreatments: [
-      { name: 'Vamana', desc: 'Therapeutic emesis for Kapha disorders, skin issues, and respiratory conditions.' },
-      { name: 'Virechana', desc: 'Controlled purgation for Pitta imbalances, liver detox, and chronic skin diseases.' },
-      { name: 'Basti', desc: 'Medicated enemas — the cornerstone of Vata treatment. Highly effective for spine and neurological issues.' },
-      { name: 'Nasya', desc: 'Nasal administration of medicines for sinusitis, migraines, and cervical problems.' },
-      { name: 'Raktamokshana', desc: 'Bloodletting for localized inflammatory conditions when indicated.' },
+    short: 'The classical method of cleansing the body by removing toxins and rejuvenating the system.',
+    intro: 'Panchakarma is the method of cleansing the body by removing toxins based on the disease condition and is an effective process for rejuvenation. The 5 main Karmas include:',
+    mainKarmas: [
+      'Vamana – Therapeutic emesis',
+      'Virechana – Induced purgation',
+      'Anuvasana Vasti – Enema using medicated oil',
+      'Nasyam – Nasal instillation of medicated substances',
+      'Asthapana Vasti – Enema using therapeutic decoctions',
+    ],
+    therapies: [
+      'Udvarthanam',
+      'Kati Vasti',
+      'Greeva Vasti',
+      'Janu Vasti',
+      'Elakizhi (Patra Potali Pinda Swedam)',
+      'Podikizhi',
+      'Naadi Swedam',
+      'Akshi Tarpanam',
+      'Dhara',
     ],
   },
   {
-    id: 'spine',
-    title: 'Spine Issues',
-    short: 'We see back pain every day. Most cases improve without surgery.',
-    subTreatments: [
-      { name: 'Back Pain', desc: 'Acute or chronic lumbar pain treated with external therapies, herbal medicines, and posture correction.' },
-      { name: 'Sciatica', desc: 'Radiating leg pain from nerve compression. We reduce inflammation and relieve pressure naturally.' },
-      { name: 'Cervical Spondylosis', desc: 'Neck stiffness and pain from disc degeneration and muscle weakness. Reversible in early stages.' },
-      { name: 'Slip Disc', desc: 'Prolapsed disc management through spinal traction, medicated oils, and strengthening protocols.' },
+    id: 'preventive',
+    title: 'Preventive Health and Wellness Plans',
+    short: 'Guidance to preserve health, prevent disease, and live in rhythm with nature.',
+    items: [
+      'Ayurvedic lifestyle',
+      'Dinacharya Guidance (Daily Healthy Routine)',
+      'Ritucharya (Seasonal Lifestyle Guidance)',
+      'Stress Management',
+      'Lifestyle Disease Prevention (Diabetes, Hypertension, Obesity)',
+      'Digestive Health Improvement',
+      'Immunity Enhancement Counselling',
+      'Community Wellness Camps',
+      'Health Education & Wellness Sessions',
     ],
   },
   {
-    id: 'skin',
-    title: 'Skin Issues',
-    short: 'Ayurvedic approach to skin treats the blood, liver, and gut — not just the surface.',
-    subTreatments: [
-      { name: 'Psoriasis', desc: 'Chronic autoimmune skin condition. We manage flare-ups and prolong remission through detox and diet.' },
-      { name: 'Eczema', desc: 'Inflammatory skin condition often linked to gut health and allergies. Treated from the root.' },
-      { name: 'Acne', desc: 'Hormonal and dietary acne in adolescents and adults. Cleared with internal medicines and face packs.' },
+    id: 'online',
+    title: 'Online Wellness Consultations',
+    short: 'Accessible Ayurvedic care through video consultations from the comfort of your home.',
+    items: [],
+  },
+  {
+    id: 'medicines',
+    title: 'Ayurveda Medicines and Supplements',
+    short: 'Authentic classical and proprietary formulations to support treatment and daily wellness.',
+    items: [],
+  },
+  {
+    id: 'rasayana',
+    title: 'Rasayana Therapy',
+    short: 'Rejuvenation therapy to delay ageing, enhance vitality, and promote healthy longevity.',
+    intro: 'Jara Chikitsa (Geriatrics & Rejuvenation) is one of the 8 branches of Ayurveda. Rasayana therapy is one of the potential therapies for mankind to follow within the permissible age limits in order to delay aging process or age healthily. The aging process occurs over all the body. It does not occur in the same way in every human being. People’s lifestyles also have additional influence on aging.',
+    items: [
+      'Rasayanas help in improving metabolism, enhancing physical strength, memory power, intelligence, skin texture and strength, sweetness of voice',
+      'Rasayanas keep the body and mind pleasant',
+      'Rasayanas help in nourishes lymph and blood tissue thereby improving the activity and nourishment of other tissues in the body thus improving resistance against infections by increasing immunity power',
+      'Rasayana prevents ageing, graying of hair, wasting of muscles; improves bone strength, blood circulation, appetite, sleep',
+      'Use of Rasayanas helps in healthy ageing, prevents chronic degenerative disorders like Arthritis, Alzheimer’s and senile disorders',
     ],
   },
-];
-
-const camps = [
-  { date: '22 June 2026', location: 'Community Hall, Main Road', focus: 'Spinal Health Screening' },
-  { date: '06 July 2026', location: 'Zilla Parishad School, Village Center', focus: 'Skin & Allergy Camp' },
-  { date: '20 July 2026', location: 'Town Hall, Near Bus Stand', focus: 'General Ayurvedic Check-up' },
 ];
 
 export default function ServicesPage() {
-  const [expanded, setExpanded] = useState<string | null>('panchakarma');
+  const [expanded, setExpanded] = useState<string | null>('consultations');
   const [formData, setFormData] = useState({ name: '', phone: '', concern: '', service: '' });
 
   const toggle = (id: string) => setExpanded(expanded === id ? null : id);
@@ -67,11 +106,11 @@ export default function ServicesPage() {
   return (
     <div className="pb-16">
       {/* Page Header */}
-      <section className="py-12 md:py-20 border-b border-gray-100">
+      <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Services</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
-            Everything we offer is grounded in classical Ayurvedic texts and adapted to modern lifestyles.
+          <p className="text-forest/60 max-w-3xl mx-auto">
+            As an Ayurveda and Wellbeing organization, we are committed to promoting holistic health through authentic Ayurvedic solutions and wellness programs.
           </p>
         </div>
       </section>
@@ -97,14 +136,45 @@ export default function ServicesPage() {
               </button>
               {expanded === svc.id && (
                 <div className="px-6 md:px-8 pb-6 md:pb-8 border-t border-gold/10">
-                  <div className="grid md:grid-cols-2 gap-4 mt-4">
-                    {svc.subTreatments.map((sub) => (
-                      <div key={sub.name} className="p-4 bg-gray-50 rounded-lg">
-                        <h3 className="font-sans text-lg font-semibold text-forest mb-1">{sub.name}</h3>
-                        <p className="text-sm text-forest/60 leading-relaxed">{sub.desc}</p>
-                      </div>
-                    ))}
-                  </div>
+                  {'intro' in svc && svc.intro && (
+                    <p className="text-sm md:text-base text-forest/70 leading-relaxed mt-4 mb-4">{svc.intro}</p>
+                  )}
+                  {'mainKarmas' in svc && svc.mainKarmas && (
+                    <div className="mb-4">
+                      <h3 className="font-sans text-sm font-bold text-forest uppercase tracking-wide mb-2">The 5 Main Karmas</h3>
+                      <ul className="grid md:grid-cols-2 gap-2">
+                        {svc.mainKarmas.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-forest/70">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {'therapies' in svc && svc.therapies && (
+                    <div className="mb-4">
+                      <h3 className="font-sans text-sm font-bold text-forest uppercase tracking-wide mb-2">External Therapies</h3>
+                      <ul className="grid md:grid-cols-3 gap-2">
+                        {svc.therapies.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-forest/70">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {svc.items && svc.items.length > 0 && (
+                    <ul className="grid md:grid-cols-2 gap-3 mt-4">
+                      {svc.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm text-forest/70">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="mt-6">
                     <a
                       href={`https://wa.me/919177816622?text=Hi, I'm interested in ${svc.title}. Please share details.`}
@@ -123,30 +193,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Medical Camps */}
-      <section id="camps" className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="font-sans text-3xl font-bold text-forest mb-3">Medical Camps</h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto" />
-            <p className="text-sm text-forest/60 mt-4 max-w-xl mx-auto">
-              We conduct regular camps in nearby villages and towns. Free basic consultation. Medicines at subsidized rates.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {camps.map((camp) => (
-              <div key={camp.date} className="p-6 bg-white border border-gray-200 rounded-lg">
-                <div className="text-gold font-sans text-lg font-semibold mb-2">{camp.date}</div>
-                <div className="text-sm text-forest/80 font-medium mb-1">{camp.location}</div>
-                <div className="text-xs text-forest/50 uppercase tracking-wide">{camp.focus}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Inline Contact Form */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 border-t border-gray-100">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-10">
             <h2 className="font-sans text-2xl font-semibold text-forest mb-2">Ask About a Service</h2>
@@ -185,7 +233,6 @@ export default function ServicesPage() {
                   {services.map((s) => (
                     <option key={s.id} value={s.title}>{s.title}</option>
                   ))}
-                  <option value="Medical Camp">Medical Camp</option>
                 </select>
               </div>
               <div>

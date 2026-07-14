@@ -40,7 +40,7 @@ export interface SiteData {
   visits: number;
 }
 
-const STORAGE_KEY = 'sri_jayanthi_data_v5';
+const STORAGE_KEY = 'sri_jayanthi_data_v7';
 
 export const defaultProducts: Product[] = [
   {
@@ -79,44 +79,58 @@ export const defaultProducts: Product[] = [
 ];
 
 export const defaultContact: ContactInfo = {
-  phone: '+91 77781 66222',
-  address: 'Sri Jayanthi Wellbeing Clinic\n[Your Address Here]',
-  email: 'contact@srijayanthi.com',
+  phone: '+91 91778 16622',
+  address: 'Sri Jayanthi Wellbeing LLP\n16-2-751/91, H. No: B-34\nState Bank Colony\nSaidabad\nHyderabad – 500059',
+  email: 'srijayanthiwellbeing@gmail.com',
   whatsappNumber: '919177816622',
 };
 
 export const defaultCampImages: CampImage[] = [
   {
     id: 'camp-1',
-    url: '/camps/image%201.png',
-    caption: 'Direct Ayurvedic consultations at a community health camp — assessing patients for joint pain, digestive disorders, and lifestyle conditions with traditional pulse diagnosis.',
+    url: '/camps/New 1.png',
+    caption: 'Ayurvedic consultation in progress — personalised health assessment and treatment guidance rooted in classical wisdom.',
     location: 'Telangana',
     date: '2025-2026',
   },
   {
     id: 'camp-2',
-    url: '/camps/image2.jpg',
-    caption: 'Free medical camp in collaboration with a local welfare organisation — offering Ayurvedic health assessments to rural families who cannot access clinical care.',
+    url: '/camps/new 2.png',
+    caption: 'Community wellness camp — bringing preventive and curative Ayurvedic care to rural families across Telangana.',
     location: 'Telangana',
     date: '2025-2026',
   },
   {
     id: 'camp-3',
-    url: '/camps/image%203.png',
-    caption: 'Educating village communities on preventive healthcare — teaching families about daily Ayurvedic routines, seasonal diets, and herbal home remedies for common ailments.',
+    url: '/camps/new 3.png',
+    caption: 'Health education and wellness counselling — empowering individuals with daily routines, seasonal diets, and natural remedies.',
     location: 'Telangana',
     date: '2025-2026',
   },
   {
     id: 'camp-4',
-    url: '/camps/image%204.png',
-    caption: 'Distribution of herbal medicines and Ayurvedic supplements to underserved communities — ensuring traditional wellness reaches every doorstep in rural Telangana.',
+    url: '/camps/image 1.png',
+    caption: 'Direct Ayurvedic consultations at a community health camp — assessing patients for joint pain, digestive disorders, and lifestyle conditions with traditional pulse diagnosis.',
     location: 'Telangana',
     date: '2025-2026',
   },
   {
     id: 'camp-5',
-    url: '/camps/image%205.png',
+    url: '/camps/image 3.png',
+    caption: 'Educating village communities on preventive healthcare — teaching families about daily Ayurvedic routines, seasonal diets, and herbal home remedies for common ailments.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-6',
+    url: '/camps/image 4.png',
+    caption: 'Distribution of herbal medicines and Ayurvedic supplements to underserved communities — ensuring traditional wellness reaches every doorstep in rural Telangana.',
+    location: 'Telangana',
+    date: '2025-2026',
+  },
+  {
+    id: 'camp-7',
+    url: '/camps/image 5.png',
     caption: 'Women\'s health focus camp — addressing PCOS, menstrual health, and postnatal care through classical Ayurvedic protocols and lifestyle counselling.',
     location: 'Telangana',
     date: '2025-2026',
@@ -124,7 +138,7 @@ export const defaultCampImages: CampImage[] = [
 ];
 
 export const defaultData: SiteData = {
-  logoUrl: '/Logo-Final-Version.png',
+  logoUrl: '/SJ.cdr.png',
   contact: defaultContact,
   products: defaultProducts,
   campImages: defaultCampImages,

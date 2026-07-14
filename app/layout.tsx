@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'free medical camps Telangana',
     'Ayurvedic products Telangana',
   ],
-  icons: { icon: '/Logo-Final-Version.png' },
+  icons: { icon: '/SJ.cdr.png' },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     description:
       'Authentic Panchakarma, spine & skin treatment, and free medical camps across Telangana.',
     url: 'https://srijayanthi.com',
-    images: [{ url: '/Logo-Final-Version.png', width: 800, height: 800, alt: 'Sri Jayanthi Wellbeing logo' }],
+    images: [{ url: '/SJ.cdr.png', width: 800, height: 800, alt: 'Sri Jayanthi Wellbeing logo' }],
   },
   twitter: {
     card: 'summary',
     title: 'Sri Jayanthi Wellbeing | Ayurvedic Clinic Telangana',
     description: 'Authentic Ayurveda for spine, skin, and lifestyle disorders across Telangana.',
-    images: ['/Logo-Final-Version.png'],
+    images: ['/SJ.cdr.png'],
   },
   alternates: {
     canonical: 'https://srijayanthi.com',

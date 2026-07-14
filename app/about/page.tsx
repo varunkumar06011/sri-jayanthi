@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us — Ayurvedic Doctor in Telangana',
-  description: 'Meet the Ayurvedic specialist behind Sri Jayanthi Wellbeing, serving patients across Telangana with authentic Panchakarma and classical Ayurvedic care.',
+  title: 'About Us — Sri Jayanthi Wellbeing',
+  description: 'Learn about Sri Jayanthi Wellbeing, our team of experienced Ayurvedic professionals, and our commitment to authentic Ayurvedic healthcare.',
   alternates: { canonical: '/about' },
 };
 
@@ -10,88 +10,36 @@ export default function AboutPage() {
   return (
     <div className="pb-16">
       {/* Page Header */}
-      <section className="py-12 md:py-20 border-b border-gray-100">
+      <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">About</h1>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">About Us</h1>
           <p className="text-forest/60 max-w-2xl mx-auto">
-            The people and the purpose behind Sri Jayanthi Wellbeing.
+            Rooted in ancient wisdom, guided by experience, and committed to holistic wellbeing.
           </p>
         </div>
       </section>
 
-      {/* Doctor Profile */}
+      {/* Introduction */}
       <section className="py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-1">
-              <div className="w-full aspect-[3/4] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center text-forest/30">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="mx-auto mb-2">
-                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span className="text-xs">Doctor Photo</span>
-                </div>
-              </div>
-            </div>
-            <div className="md:col-span-2">
-              <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-2">Dr. [Founder Name]</h2>
-              <p className="text-sm text-gold font-medium mb-6">BAMS, MD (Ayurveda) | Panchakarma Specialist</p>
-              <div className="space-y-4 text-sm text-forest/70 leading-relaxed">
-                <p>
-                  I have been practicing Ayurveda for over 15 years now. My training started in a traditional gurukul setting 
-                  and was solidified by years of clinical work in both government hospitals and private practice.
-                </p>
-                <p>
-                  I specialize in Panchakarma and musculoskeletal disorders — mainly because I saw too many people 
-                  suffering from back pain and being told surgery was the only option. It rarely is.
-                </p>
-                <p>
-                  My approach is conversational. I explain your condition, the treatment plan, and what you can realistically expect. 
-                  No miracles. No guarantees. Just solid medicine applied with care.
-                </p>
-              </div>
-              <div className="mt-6 p-5 bg-gray-50 border-l-4 border-forest">
-                <p className="text-base text-forest/90 leading-relaxed font-medium">
-                  We don't just treat — we teach you to heal.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-6">
-            <img src="/Logo-Final-Version.png" alt="" className="w-20 h-auto opacity-40" />
-          </div>
-          <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-4">Our Mission</h2>
-          <p className="text-forest/70 leading-relaxed">
-            To make authentic Ayurvedic healthcare accessible, honest, and effective. 
-            We believe that true wellness comes from understanding your own body, not depending on a doctor forever. 
-            Our job is to guide you back to balance — and then teach you how to stay there.
-          </p>
-        </div>
-      </section>
-
-      {/* Clinic Origin */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-sans text-2xl font-bold text-forest mb-6">How the Clinic Started</h2>
-          <div className="space-y-4 text-sm text-forest/70 leading-relaxed">
+          <div className="space-y-4 text-sm md:text-base text-forest/80 leading-relaxed text-center">
             <p>
-              Sri Jayanthi began as a small consultation room in 2009. I had just completed my post-graduation and wanted 
-              a space where I could practice without rushing through patients.
+              Sri Jayanthi Wellbeing has been established with the belief that true health is achieved when the Physical, Mental health and Social wellbeing exist in perfect harmony. Guided by the timeless proven wisdom of Ayurveda, we are dedicated to offering authentic healing experiences that nurture wellness, restore balance, and inspire a healthier way of living.
             </p>
             <p>
-              Word spread slowly. A farmer with chronic knee pain walked in, and walked out pain-free after two weeks. 
-              A teacher with psoriasis found relief after years of steroid creams. They told their families. Their families told others.
+              Founded with the vision of making Ayurveda accessible for overall wellbeing of all, Sri Jayanthi combines traditional healing practices with personalised care in a serene and compassionate environment. Our services include Ayurvedic consultations, Panchakarma therapies at our clinics, wellness counselling and preventive healthcare programmes, each tailored to the unique constitution and health goals of every individual.
             </p>
             <p>
-              Today we have a full Panchakarma unit, a pharmacy, and a team of therapists and assistants. 
-              But the core remains the same: one patient at a time, one honest conversation at a time.
+              Our journey is inspired by Ayurvedic knowledge that renders best practices and medicines for healthy living, few decades of Clinical excellence and Learnings from the legacy of distinguished practitioners in the field. This rich heritage guides every aspect of our practice, enabling us to offer holistic solutions for preventive care, chronic health concerns, lifestyle disorders, and long term wellbeing.
+            </p>
+            <p>
+              Complementing our clinical services coupled with extensive experience in Clinical Research, is our dedicated Ayurvedic pharmacy, where Classical, Proprietary formulations and Wellness Products are manufactured with uncompromising attention to authenticity, purity, and quality in a GMP certified facility. We carefully source premium raw material required and follow methods per Ayurveda literature, supported by rigorous quality standards, to preserve the natural potency and therapeutic value of every medicine or supplement.
+            </p>
+            <p>
+              Our formulations are designed to strengthen immunity, rejuvenate the body, enhance vitality, and support the management of a wide range of health conditions, from common ailments to intractable non-communicable disorders. Every formula reflects our commitment to delivering the true benefits of Ayurveda with integrity and excellence.
+            </p>
+            <p className="font-semibold text-forest">
+              At Sri Jayanthi Wellbeing, our purpose is to help every individual embrace a life of balance, vitality, and holistic wellbeing through the transformative power of authentic Ayurveda.
             </p>
           </div>
         </div>
@@ -100,22 +48,72 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-sans text-2xl font-bold text-forest mb-8 text-center">The Team</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { role: 'Ayurvedic Doctor', desc: 'Patient consultations, diagnosis, and treatment planning.' },
-              { role: 'Panchakarma Therapist', desc: 'Classical procedure execution and post-treatment care.' },
-              { role: 'Pharmacy Assistant', desc: 'Medicine preparation, dispensing, and inventory.' },
-            ].map((member, i) => (
-              <div key={i} className="p-6 bg-white border border-gray-200 rounded-lg text-center">
-                <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center mx-auto mb-4 text-forest font-sans font-bold text-xl">
-                  {member.role[0]}
-                </div>
-                <h3 className="font-sans text-lg font-semibold text-forest mb-2">{member.role}</h3>
-                <p className="text-sm text-forest/60">{member.desc}</p>
-              </div>
-            ))}
+          <div className="text-center mb-12">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Our Team</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Dr. Srujana Komatreddy */}
+            <div className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center shrink-0 text-forest font-sans font-bold text-2xl">
+                  S
+                </div>
+                <div>
+                  <h3 className="font-sans text-xl font-semibold text-forest">Dr. Srujana Komatreddy</h3>
+                  <p className="text-sm text-gold font-medium">Managing Partner and Ayurveda Physician</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-sm text-forest/70 leading-relaxed">
+                <p>
+                  Dr. Srujana Reddy is a seasoned healthcare leader with over two decades of experience spanning Ayurveda Medicine, Clinical Research, Drug Development, and Hospital Management. Throughout her career, she has successfully led large scale global healthcare and clinical research initiatives, building and mentoring high-performing multidisciplinary teams while ensuring excellence in quality, governance, and compliance with international regulatory standards.
+                </p>
+                <p>
+                  With a unique blend of expertise in modern drug development and the timeless principles of Ayurveda, Dr. Reddy is committed to bridging traditional wisdom with evidence based healthcare. Her vision is to establish a globally trusted Ayurvedic wellbeing enterprise that delivers authentic wellness solutions rooted in the principles of holistic health.
+                </p>
+                <p>
+                  As Managing Partner, she is dedicated to advancing preventive healthcare, empowering individuals and communities through education and sustainable livelihood opportunities, and fostering strategic collaborations that drive innovation, business growth, and meaningful social impact. Guided by a commitment to integrity, authenticity, and excellence, Dr. Reddy leads the organization in its mission to make Ayurveda an accessible, trusted, and transformative path to lifelong wellbeing.
+                </p>
+              </div>
+            </div>
+
+            {/* Sri K. Sanjeeva Reddy */}
+            <div className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center shrink-0 text-forest font-sans font-bold text-2xl">
+                  K
+                </div>
+                <div>
+                  <h3 className="font-sans text-xl font-semibold text-forest">Sri K. Sanjeeva Reddy</h3>
+                  <p className="text-sm text-gold font-medium">Partner</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-sm text-forest/70 leading-relaxed">
+                <p>
+                  Mr. Reddy brings over five decades of distinguished professional experience spanning banking, finance, and organizational leadership. He served with distinction in the banking industry for nearly four decades, retiring as a Top Management Executive from a leading Public Sector Bank. He subsequently spent more than a decade as Senior General Manager, Finance at a reputed Microfinance Organization, where he continued to contribute through strategic financial leadership and governance.
+                </p>
+                <p>
+                  Mr. Reddy has been a strong advocate of discipline, integrity, commitment, and the adoption of healthy lifestyle practices from an early age. He firmly believes that lasting wellbeing is the foundation for sustained personal and professional excellence.
+                </p>
+                <p>
+                  Known for his calm demeanour and sound judgment, Mr. Reddy excels in handling complex and critical situations with confidence, clarity, and composure. His ability to navigate challenges, make balanced decisions, and inspire confidence in others has been a hallmark of his leadership journey.
+                </p>
+                <p>
+                  Mr. Reddy brings this rich experience, strategic perspective, and unwavering commitment to wellbeing, helping guide our team and clients on a journey towards holistic health, resilience, and a balanced way of life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Acknowledgements */}
+      <section className="py-12 md:py-16 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-sans text-2xl font-bold text-forest mb-4">Acknowledgements</h2>
+          <p className="text-sm md:text-base text-forest/70 leading-relaxed">
+            We sincerely acknowledge and thank <span className="font-semibold text-forest">Dr. Surendra Sharma Ji (RNS Ayurveda, Ras Shala)</span>, <span className="font-semibold text-forest">Vedicare Ayurveda</span>, and <span className="font-semibold text-forest">Giosun Healthcare Pvt. Ltd.</span> for their continued support and valuable contribution to the mission of Sri Jayanthi Wellbeing.
+          </p>
         </div>
       </section>
     </div>

@@ -7,12 +7,11 @@ import { loadData } from '@/lib/store';
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
   { href: '/products', label: 'Products' },
-  { href: '/medical-camps', label: 'Medical Camps' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/about', label: 'About' },
-  { href: '/reviews', label: 'Reviews' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/contact', label: 'Contact Us' },
 ];
 
 export default function Header() {

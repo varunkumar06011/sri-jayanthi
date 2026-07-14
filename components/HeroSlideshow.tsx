@@ -3,11 +3,9 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const images = [
-  '/panchakarma.jpg',
-  '/skin-healing.jpg',
-  '/spine-care.png',
-  '/camps/image2.jpg',
-  '/gas-empt.png',
+  '/camps/New 1.png',
+  '/camps/new 2.png',
+  '/camps/new 3.png',
 ];
 
 export default function HeroSlideshow() {

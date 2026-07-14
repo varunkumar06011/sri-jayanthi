@@ -6,10 +6,11 @@ import { loadData } from '@/lib/store';
 import { useState, useEffect } from 'react';
 
 const quickLinks = [
+  { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
   { href: '/products', label: 'Products' },
-  { href: '/about', label: 'About' },
-  { href: '/reviews', label: 'Reviews' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/contact', label: 'Contact Us' },
 ];
 
 export default function Footer() {
