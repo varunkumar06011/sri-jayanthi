@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowRight, Leaf, Users, MessageCircle } from 'lucide-react';
-import { loadData, addLead, type Product } from '@/lib/store';
+import { loadData, addLead, defaultContact, type Product } from '@/lib/store';
 
 const classicalProducts = [
   {
@@ -47,9 +47,8 @@ const classicalProducts = [
   },
 ];
 
-function ProductCard({ product }: { product: Product }) {
-  const data = loadData();
-  const whatsappLink = `https://wa.me/${data.contact.whatsappNumber}?text=${encodeURIComponent(
+function ProductCard({ product, whatsappNumber }: { product: Product; whatsappNumber: string }) {
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     `Hi, I'm interested in ${product.name}. Please share details.`
   )}`;
 
@@ -125,10 +124,17 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [whatsappNumber, setWhatsappNumber] = useState(defaultContact.whatsappNumber);
 
   useEffect(() => {
-    setProducts(loadData().products);
-    const handler = () => setProducts(loadData().products);
+    const data = loadData();
+    setProducts(data.products);
+    setWhatsappNumber(data.contact.whatsappNumber);
+    const handler = () => {
+      const next = loadData();
+      setProducts(next.products);
+      setWhatsappNumber(next.contact.whatsappNumber);
+    };
     window.addEventListener('storage', handler);
     return () => window.removeEventListener('storage', handler);
   }, []);
@@ -175,7 +181,7 @@ export default function ProductsPage() {
           {products.length > 0 ? (
             <div className="grid md:grid-cols-3 gap-8">
               {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product} whatsappNumber={whatsappNumber} />
               ))}
             </div>
           ) : (

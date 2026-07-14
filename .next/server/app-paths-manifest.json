@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/reviews/page": "app/reviews/page.js",
+  "/experience/page": "app/experience/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/products/page": "app/products/page.js",
+  "/admin/settings/page": "app/admin/settings/page.js",
+  "/admin/leads/page": "app/admin/leads/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/camps/page": "app/admin/camps/page.js",
+  "/admin/products/page": "app/admin/products/page.js",
+  "/medical-camps/page": "app/medical-camps/page.js",
+  "/services/page": "app/services/page.js"
+}

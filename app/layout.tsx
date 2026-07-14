@@ -64,10 +64,8 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
         />
-        <link
-          rel="prefetch"
-          href="/services"
-        />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
       <body className="bg-white min-h-screen flex flex-col">
         <script

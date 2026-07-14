@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, MapPin, Mail } from 'lucide-react';
-import { loadData } from '@/lib/store';
+import { defaultContact, defaultData } from '@/lib/store';
 import { useState, useEffect } from 'react';
 
 const quickLinks = [
@@ -14,15 +14,25 @@ const quickLinks = [
 ];
 
 export default function Footer() {
-  const [contact, setContact] = useState(loadData().contact);
-  const [logoUrl, setLogoUrl] = useState(loadData().logoUrl);
+  const [contact, setContact] = useState(defaultContact);
+  const [logoUrl, setLogoUrl] = useState(defaultData.logoUrl);
 
   useEffect(() => {
-    const handler = () => {
-      const data = loadData();
-      setContact(data.contact);
-      setLogoUrl(data.logoUrl);
+    if (typeof window === 'undefined') return;
+    const loadFooterData = () => {
+      try {
+        const raw = localStorage.getItem('sri_jayanthi_data_v7');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          setContact({ ...defaultContact, ...parsed.contact });
+          if (parsed.logoUrl) setLogoUrl(parsed.logoUrl);
+        }
+      } catch {
+        // ignore
+      }
     };
+    loadFooterData();
+    const handler = () => loadFooterData();
     window.addEventListener('storage', handler);
     return () => window.removeEventListener('storage', handler);
   }, []);
@@ -57,6 +67,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={true}
                     className="text-sm text-cream/70 hover:text-gold transition-colors"
                   >
                     {link.label}
@@ -122,6 +133,22 @@ export default function Footer() {
             <span className="text-cream/20">|</span>
             <span className="text-xs text-cream/50">Follow us on social media</span>
           </div>
+        </div>
+        <div className="mt-6 pt-5 border-t border-gold/30 text-center">
+          <p className="text-xs sm:text-sm text-cream/80 font-medium tracking-wide">
+            Website done and maintained by{' '}
+            <span className="text-gold font-semibold">Vtech</span>
+            {' · '}
+            Contact:{' '}
+            <a
+              href="https://wa.me/919393178370?text=Hi%20Vtech%2C%20I%20found%20your%20contact%20on%20Sri%20Jayanthi%20Wellbeing%20website."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-cream transition-colors font-semibold"
+            >
+              9393178370
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -162,6 +162,7 @@ export default function HomePage() {
               <Link
                 key={tile.title}
                 href={tile.href}
+                prefetch={true}
                 className="group p-6 paper-card hover:border-gray-300 hover:bg-gray-50 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center mb-4 group-hover:bg-forest group-hover:text-cream transition-colors">

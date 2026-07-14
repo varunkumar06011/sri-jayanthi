@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { loadData } from '@/lib/store';
+import { defaultData } from '@/lib/store';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -16,10 +16,23 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [logoUrl, setLogoUrl] = useState(loadData().logoUrl);
+  const [logoUrl, setLogoUrl] = useState(defaultData.logoUrl);
 
   useEffect(() => {
-    const handler = () => setLogoUrl(loadData().logoUrl);
+    if (typeof window === 'undefined') return;
+    const loadLogo = () => {
+      try {
+        const raw = localStorage.getItem('sri_jayanthi_data_v7');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.logoUrl) setLogoUrl(parsed.logoUrl);
+        }
+      } catch {
+        // ignore
+      }
+    };
+    loadLogo();
+    const handler = () => loadLogo();
     window.addEventListener('storage', handler);
     return () => window.removeEventListener('storage', handler);
   }, []);
@@ -51,6 +64,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 className="text-sm font-medium text-forest/80 hover:text-gold transition-colors duration-200 tracking-wide"
               >
                 {link.label}
@@ -88,6 +102,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch={true}
                   onClick={() => setMobileOpen(false)}
                   className="px-3 py-2.5 text-forest/80 hover:text-gold hover:bg-[#f5ede0] rounded-sm transition-colors"
                 >
