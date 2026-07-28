@@ -21,7 +21,7 @@ export default function Footer() {
     if (typeof window === 'undefined') return;
     const loadFooterData = () => {
       try {
-        const raw = localStorage.getItem('sri_jayanthi_data_v7');
+        const raw = localStorage.getItem('sri_jayanthi_data_v8');
         if (raw) {
           const parsed = JSON.parse(raw);
           setContact({ ...defaultContact, ...parsed.contact });

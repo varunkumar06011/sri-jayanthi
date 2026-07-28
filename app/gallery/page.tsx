@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { loadData, type CampImage } from '@/lib/store';
-import { CalendarDays, MapPin } from 'lucide-react';
+import { CalendarDays } from 'lucide-react';
 
 export default function GalleryPage() {
   const [images, setImages] = useState<CampImage[]>([]);
@@ -20,15 +20,41 @@ export default function GalleryPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Gallery</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
-            Glimpses of our medical camps, consultations, and community wellness initiatives across Telangana.
-          </p>
+          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-2">Gallery</h1>
+          <p className="text-sm md:text-base text-forest/70">Glimpse of Community Outreach Program</p>
+        </div>
+      </section>
+
+      {/* Medical / Awareness Camps */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest mb-8 text-center">Medical Camps / Awareness Camps</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { src: '/camps/camp 1.jpg', alt: 'Camp 1' },
+              { src: '/camps/camp 2.jpg', alt: 'Camp 2' },
+              { src: '/camps/camp 3.jpg', alt: 'Camp 3' },
+            ].map((img) => (
+              <div key={img.src} className="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+                <div className="relative overflow-hidden h-56">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect fill="%23f3f4f6" width="400" height="300"/><text fill="%239ca3af" font-size="14" x="50%25" y="50%25" text-anchor="middle" dy=".3em">Image not found</text></svg>';
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {images.length === 0 ? (
             <div className="text-center py-16 text-forest/40">
@@ -49,23 +75,6 @@ export default function GalleryPage() {
                           'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect fill="%23f3f4f6" width="400" height="300"/><text fill="%239ca3af" font-size="14" x="50%25" y="50%25" text-anchor="middle" dy=".3em">Image not found</text></svg>';
                       }}
                     />
-                  </div>
-                  <div className="p-4">
-                    <p className="text-sm text-forest/80 leading-relaxed mb-3">{img.caption}</p>
-                    <div className="flex items-center gap-4 text-xs text-forest/50">
-                      {img.location && (
-                        <span className="flex items-center gap-1">
-                          <MapPin size={11} />
-                          {img.location}
-                        </span>
-                      )}
-                      {img.date && (
-                        <span className="flex items-center gap-1">
-                          <CalendarDays size={11} />
-                          {img.date}
-                        </span>
-                      )}
-                    </div>
                   </div>
                 </div>
               ))}

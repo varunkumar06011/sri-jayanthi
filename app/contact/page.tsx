@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock, Calendar, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us — Sri Jayanthi Wellbeing',
-  description: 'Get in touch with Sri Jayanthi Wellbeing for consultations, appointments, and enquiries.',
+  description: 'Get in touch with Sri Jayanthi Wellbeing for consultations, appointments and enquiries.',
   alternates: { canonical: '/contact' },
 };
 
@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Contact Us</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
+          <p className="text-forest/70 max-w-2xl mx-auto">
             We are here to help you begin your journey towards holistic health and wellbeing.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function ContactPage() {
                 <Phone size={22} />
               </div>
               <h2 className="font-sans text-lg font-semibold text-forest mb-2">Phone</h2>
-              <a href="tel:+919177816622" className="text-forest/70 hover:text-gold transition-colors">
+              <a href="tel:+919177816622" className="text-forest hover:text-gold transition-colors">
                 +91 91778 16622
               </a>
             </div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                 <Mail size={22} />
               </div>
               <h2 className="font-sans text-lg font-semibold text-forest mb-2">Email</h2>
-              <a href="mailto:srijayanthiwellbeing@gmail.com" className="text-forest/70 hover:text-gold transition-colors">
+              <a href="mailto:srijayanthiwellbeing@gmail.com" className="text-forest hover:text-gold transition-colors">
                 srijayanthiwellbeing@gmail.com
               </a>
             </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <MapPin size={22} />
               </div>
               <h2 className="font-sans text-lg font-semibold text-forest mb-2">Address</h2>
-              <address className="not-italic text-sm text-forest/70 leading-relaxed">
+              <address className="not-italic text-sm text-forest/80 leading-relaxed">
                 Sri Jayanthi Wellbeing LLP<br />
                 16-2-751/91, H. No: B-34<br />
                 State Bank Colony<br />
@@ -79,7 +79,7 @@ export default function ContactPage() {
               <Calendar size={18} className="text-gold mt-0.5 shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-forest">Timings</p>
-                <p className="text-sm text-forest/70">
+                <p className="text-sm text-forest/80">
                   Monday to Sunday: 10am to 2pm and 5pm to 7pm. Please note that schedule may vary based on Doctor’s availability.
                 </p>
               </div>
@@ -88,21 +88,21 @@ export default function ContactPage() {
               <span className="text-gold font-bold shrink-0">₹</span>
               <div>
                 <p className="text-sm font-semibold text-forest">Consultation Fees</p>
-                <p className="text-sm text-forest/70">Rs. 500/- INR</p>
+                <p className="text-sm text-forest/80">Rs. 500/- INR</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-gold font-bold shrink-0">₹</span>
               <div>
                 <p className="text-sm font-semibold text-forest">Online Consultation / Wellness Counselling Fees</p>
-                <p className="text-sm text-forest/70">Rs. 1000/- INR</p>
+                <p className="text-sm text-forest/80">Rs. 1000/- INR</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Clock size={18} className="text-gold mt-0.5 shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-forest">Overseas Consultation</p>
-                <p className="text-sm text-forest/70">Other than the regular timings — On Request</p>
+                <p className="text-sm text-forest/80">Other than the regular timings — On Request</p>
               </div>
             </div>
             <div className="p-4 bg-forest/5 rounded-lg">

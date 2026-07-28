@@ -550,6 +550,24 @@ video {
 .top-1\/2 {
   top: 50%;
 }
+.bottom-20 {
+  bottom: 5rem;
+}
+.left-5 {
+  left: 1.25rem;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.bottom-28 {
+  bottom: 7rem;
+}
+.left-auto {
+  left: auto;
+}
+.right-auto {
+  right: auto;
+}
 .z-10 {
   z-index: 10;
 }
@@ -729,6 +747,9 @@ video {
 }
 .h-px {
   height: 1px;
+}
+.h-24 {
+  height: 6rem;
 }
 .min-h-\[320px\] {
   min-height: 320px;
@@ -1177,6 +1198,9 @@ video {
 .pt-6 {
   padding-top: 1.5rem;
 }
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1349,6 +1373,12 @@ video {
 }
 .text-white\/90 {
   color: rgb(255 255 255 / 0.9);
+}
+.text-forest\/90 {
+  color: rgb(26 74 46 / 0.9);
+}
+.text-white\/95 {
+  color: rgb(255 255 255 / 0.95);
 }
 .opacity-30 {
   opacity: 0.3;
@@ -1649,12 +1679,32 @@ body {
 }
 @media (min-width: 640px) {
 
+  .sm\:absolute {
+    position: absolute;
+  }
+
   .sm\:left-5 {
     left: 1.25rem;
   }
 
   .sm\:right-5 {
     right: 1.25rem;
+  }
+
+  .sm\:left-10 {
+    left: 2.5rem;
+  }
+
+  .sm\:right-10 {
+    right: 2.5rem;
+  }
+
+  .sm\:bottom-20 {
+    bottom: 5rem;
+  }
+
+  .sm\:bottom-8 {
+    bottom: 2rem;
   }
 
   .sm\:block {
@@ -1681,12 +1731,28 @@ body {
     height: 300px;
   }
 
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
+  .sm\:h-24 {
+    height: 6rem;
+  }
+
+  .sm\:h-28 {
+    height: 7rem;
+  }
+
   .sm\:min-h-\[70vh\] {
     min-height: 70vh;
   }
 
   .sm\:w-12 {
     width: 3rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:grid-cols-2 {
@@ -1705,8 +1771,17 @@ body {
     align-items: center;
   }
 
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
   .sm\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .sm\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .sm\:p-2 {
@@ -1726,6 +1801,15 @@ body {
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .sm\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .sm\:text-2xl {
@@ -1758,6 +1842,22 @@ body {
     top: 0px;
   }
 
+  .md\:left-14 {
+    left: 3.5rem;
+  }
+
+  .md\:right-14 {
+    right: 3.5rem;
+  }
+
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
+  .md\:right-10 {
+    right: 2.5rem;
+  }
+
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -1784,6 +1884,18 @@ body {
 
   .md\:h-auto {
     height: auto;
+  }
+
+  .md\:h-16 {
+    height: 4rem;
+  }
+
+  .md\:h-28 {
+    height: 7rem;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
   }
 
   .md\:min-h-\[420px\] {
@@ -1923,6 +2035,14 @@ body {
   }
 }
 @media (min-width: 1024px) {
+
+  .lg\:left-14 {
+    left: 3.5rem;
+  }
+
+  .lg\:right-14 {
+    right: 3.5rem;
+  }
 
   .lg\:min-h-\[80vh\] {
     min-height: 80vh;

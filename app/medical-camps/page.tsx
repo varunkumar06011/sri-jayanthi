@@ -15,17 +15,17 @@ const whyWeCamp = [
   {
     icon: HeartHandshake,
     title: 'Healthcare Reaches You',
-    text: 'Not everyone can travel to a clinic. We bring qualified Ayurvedic assessment to villages, community halls, and public gatherings — free of cost.',
+    text: 'Not everyone can travel to a clinic. We bring qualified Ayurvedic assessment to villages, community halls and public gatherings — free of cost.',
   },
   {
     icon: Users,
     title: 'Collective Empowerment',
-    text: 'Camps are not just about treatment. We educate families on diet, daily routines, and early warning signs — so communities can make better health decisions together.',
+    text: 'Camps are not just about treatment. We educate families on diet, daily routines and early warning signs — so communities can make better health decisions together.',
   },
   {
     icon: MapPin,
     title: 'Rooted in the Region',
-    text: "We focus on Telangana's rural pockets where lifestyle diseases go undiagnosed for years. Our work is local, consistent, and deeply committed.",
+    text: "We focus on rural pockets where lifestyle diseases go undiagnosed for years. Our work is local, consistent and deeply committed.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function MedicalCampsPage() {
             <h1 className="font-sans text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
               Taking Ayurveda<br />to the Community
             </h1>
-            <p className="text-base md:text-lg text-forest/70 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-base md:text-lg text-forest/80 leading-relaxed mb-8 max-w-2xl">
               Sri Jayanthi Wellbeing runs regular free medical camps across Andhra Pradesh — bringing qualified Ayurvedic consultations directly to people who need it most. No fee, no appointment, no barrier.
             </p>
             <a
@@ -190,7 +190,7 @@ export default function MedicalCampsPage() {
                   <item.icon size={20} className="text-forest" />
                 </div>
                 <h3 className="font-sans text-xl font-semibold text-forest mb-3">{item.title}</h3>
-                <p className="text-sm text-forest/70 leading-relaxed">{item.text}</p>
+                <p className="text-sm text-forest/80 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -203,7 +203,7 @@ export default function MedicalCampsPage() {
           <div className="text-center mb-12">
             <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">From the Field</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
-            <p className="text-sm text-forest/60 max-w-xl mx-auto">
+            <p className="text-sm text-forest/70 max-w-xl mx-auto">
               Real consultations. Real patients. Real communities. These are moments from our camps — not staged, not curated.
             </p>
           </div>
@@ -257,8 +257,8 @@ export default function MedicalCampsPage() {
           <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-4">
             Want to host a camp in your area?
           </h2>
-          <p className="text-forest/60 text-sm mb-6 max-w-lg mx-auto">
-            We partner with panchayats, welfare organisations, and educational institutions. Reach out and we'll work out the details.
+          <p className="text-forest/70 text-sm mb-6 max-w-lg mx-auto">
+            We partner with panchayats, welfare organisations and educational institutions. Reach out and we'll work out the details.
           </p>
           <a
             href="https://wa.me/919177816622?text=Hi, I'd like to organise a medical camp in my area."

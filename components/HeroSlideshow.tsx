@@ -4,9 +4,9 @@ import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-  '/camps/New 1.png',
-  '/camps/new 2.png',
-  '/camps/new 3.png',
+  '/camps/ayurveda 1.jpg',
+  '/camps/ayurveda 2.jpg',
+  '/camps/ayurveda 3.jpg',
 ];
 
 export default function HeroSlideshow() {
@@ -61,7 +61,7 @@ export default function HeroSlideshow() {
           <img
             src={src}
             alt={`Slide ${i + 1}`}
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain sm:object-cover object-center bg-white"
             draggable={false}
           />
         </div>

@@ -14,7 +14,7 @@ const quickTiles = [
   {
     icon: Package,
     title: 'Products',
-    description: 'Ayurvedic oils, powders, and remedies',
+    description: 'Ayurvedic oils, powders and remedies',
     href: '/products',
   },
   {
@@ -29,17 +29,17 @@ const pillars = [
   {
     icon: Shield,
     title: 'Preventive Care',
-    text: 'Swasthasya Swasthya Rakshanam — preserving the health of the healthy through daily routines, seasonal wisdom, and balanced living.',
+    text: 'Swasthasya Swasthya Rakshanam — preserving the health of the healthy through daily routines, seasonal wisdom and balanced living.',
   },
   {
     icon: Heart,
     title: 'Curative Care',
-    text: 'Aturasya Vikara Prashamanam — alleviating disease with authentic Ayurvedic consultations, Panchakarma, and classical medicines.',
+    text: 'Aturasya Vikara Prashamanam — alleviating disease with authentic Ayurvedic consultations, Panchakarma and classical medicines.',
   },
   {
     icon: Leaf,
     title: 'Holistic Balance',
-    text: 'Restoring harmony of Doshas, Agni, Dhatus, and Malas while nurturing the mind, senses, and spirit for complete wellbeing.',
+    text: 'Restoring harmony of Doshas, Agni, Dhatus and Malas while nurturing the mind, senses and spirit for complete wellbeing.',
   },
 ];
 
@@ -47,59 +47,49 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero — unified full-bleed slideshow + text overlay */}
-      <section className="relative min-h-[62vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[62vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <HeroSlideshow />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 md:px-14 py-14 sm:py-16">
-          <div className="max-w-lg">
-            <h1
-              className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-1"
-              style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+        <div className="relative z-10 flex flex-col items-center text-center px-5 sm:px-10 md:px-14 py-14 sm:py-16">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-px bg-white/50" />
+            <svg viewBox="0 0 120 20" fill="none" className="w-16 h-4 text-white/50">
+              <path d="M10 10 Q20 2 30 10 Q40 18 50 10 Q60 2 70 10 Q80 18 90 10 Q100 2 110 10" stroke="currentColor" strokeWidth="1.2" fill="none" />
+              <circle cx="60" cy="10" r="2.5" fill="currentColor" />
+            </svg>
+            <div className="w-10 h-px bg-white/50" />
+          </div>
+          <p
+            className="text-xl sm:text-2xl md:text-3xl text-white/95 leading-relaxed mb-8 max-w-2xl font-medium"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}
+          >
+            Preventive and Curative treatment through proven wisdom.
+          </p>
+        </div>
+
+        <div className="relative sm:absolute bottom-0 sm:bottom-8 left-auto sm:left-5 right-auto sm:right-5 md:left-10 md:right-10 lg:left-14 lg:right-14 z-10 w-full sm:w-auto px-5 sm:px-0">
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-3 pb-8 sm:pb-0">
+            <a
+              href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors w-full sm:w-auto justify-center"
             >
-              Sri Jayanthi
-            </h1>
-            <span
-              className="block font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 tracking-wide"
-              style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+              Book Consultation
+              <ArrowRight size={16} />
+            </a>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors w-full sm:w-auto justify-center"
             >
-              Wellbeing
-            </span>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-px bg-white/50" />
-              <svg viewBox="0 0 120 20" fill="none" className="w-16 h-4 text-white/50">
-                <path d="M10 10 Q20 2 30 10 Q40 18 50 10 Q60 2 70 10 Q80 18 90 10 Q100 2 110 10" stroke="currentColor" strokeWidth="1.2" fill="none" />
-                <circle cx="60" cy="10" r="2.5" fill="currentColor" />
-              </svg>
-            </div>
-            <p
-              className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-sm"
-              style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}
-            >
-              Preventive and Curative treatment through proven wisdom.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
-              >
-                Book Consultation
-                <ArrowRight size={16} />
-              </a>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors"
-              >
-                Explore Services
-              </Link>
-            </div>
+              Explore Services
+            </Link>
           </div>
         </div>
 
         <a
           href="#philosophy"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
+          className="absolute bottom-28 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
         >
           <ChevronDown size={28} className="animate-bounce-scroll" />
         </a>
@@ -108,27 +98,14 @@ export default function HomePage() {
       {/* Philosophy Section */}
       <section id="philosophy" className="py-16 md:py-24 border-t border-[#e8dcc8]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-6 flex justify-center">
-            <img
-              src="/SJ.cdr.png"
-              alt="Sri Jayanthi"
-              className="h-14 w-auto object-contain mix-blend-multiply opacity-80"
-            />
-          </div>
-          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gold mb-3 tracking-wide">
-            Welcome to an Incredible Ayurveda Journey
-          </p>
-          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
-            Preventive and Curative Treatment Through Proven Wisdom
-          </h2>
           <div className="my-8 p-6 md:p-8 bg-parchment border border-[#e8dcc8] rounded-lg">
             <p className="text-xl md:text-2xl font-bold text-forest mb-2">
               स्वस्थस्य स्वास्थ्य रक्षणं, आतुरस्य विकार प्रशमनं
             </p>
-            <p className="text-sm md:text-base text-forest/70 italic">
+            <p className="text-sm md:text-base text-forest/80 italic">
               Swasthasya Swasthya Rakshanam, Aturasya Vikara Prashamanam
             </p>
-            <p className="text-sm text-forest/60 mt-2">
+            <p className="text-sm text-forest/70 mt-2">
               To preserve the health of the healthy and to alleviate the ailments of those who are ill.
             </p>
           </div>
@@ -136,18 +113,14 @@ export default function HomePage() {
             <p>
               <span className="font-semibold text-forest">समदोषः समाग्निश्च समधातुमलक्रियाः।<br />प्रसन्नात्मेन्द्रियमनाः स्वस्थ इत्यभिधीयते॥</span>
             </p>
-            <p className="italic text-forest/70">
-              Samadoṣaḥ samāgniśca samadhātumalakriyāḥ<br />
-              Prasannātmendriyamanāḥ svastha ityabhidhīyate
+            <p>
+              Ayurveda views health as far more than the mere absence of disease. It is a state of complete harmony in which the Doshas (Vata, Pitta and Kapha) are in balance, Agni (the digestive and metabolic fire) functions optimally, the Dhatus (body tissues) are well nourished and the Malas (natural waste elimination processes) are maintained efficiently.
             </p>
             <p>
-              Ayurveda views health as far more than the mere absence of disease. It is a state of complete harmony in which the Doshas (Vata, Pitta, and Kapha) are in balance, Agni (the digestive and metabolic fire) functions optimally, the Dhatus (body tissues) are well nourished, and the Malas (natural waste elimination processes) are maintained efficiently.
+              Equally important is the wellbeing of the Atma (spirit), Indriyas (sense organs) and Manas (mind), all of which should remain calm, clear and content. This holistic perspective recognises health as a dynamic balance of physical, mental, emotional and spiritual wellbeing, empowering individuals to live with vitality, resilience and harmony.
             </p>
             <p>
-              Equally important is the wellbeing of the Atma (spirit), Indriyas (sense organs), and Manas (mind), all of which should remain calm, clear, and content. This holistic perspective recognises health as a dynamic balance of physical, mental, emotional, and spiritual wellbeing, empowering individuals to live with vitality, resilience, and harmony.
-            </p>
-            <p>
-              The above principles from Ayurvedic literature, <span className="font-semibold text-forest">Charaka Samhita</span> and <span className="font-semibold text-forest">Sushrutha Samhita</span>, form the foundation of our philosophy at Sri Jayanthi Wellbeing. We are committed not only to treating disease but also to promoting preventive healthcare, restoring balance, and empowering every individual to achieve lifelong health and holistic wellbeing.
+              The above principles from Ayurvedic literature, <span className="font-semibold text-forest">Charaka Samhita</span> and <span className="font-semibold text-forest">Sushrutha Samhita</span>, form the foundation of our philosophy at Sri Jayanthi Wellbeing. We are committed not only to treating disease but also to promoting preventive healthcare, restoring balance and empowering every individual to achieve lifelong health and holistic wellbeing.
             </p>
           </div>
           <div className="inline-block px-6 py-3 bg-forest text-cream rounded-sm">
@@ -172,7 +145,7 @@ export default function HomePage() {
                   <tile.icon size={22} className="text-forest group-hover:text-cream" />
                 </div>
                 <h3 className="font-sans text-xl font-semibold text-forest mb-2">{tile.title}</h3>
-                <p className="text-sm text-forest/60">{tile.description}</p>
+                <p className="text-sm text-forest/70">{tile.description}</p>
               </Link>
             ))}
           </div>
@@ -195,7 +168,7 @@ export default function HomePage() {
                   <p.icon size={20} />
                 </div>
                 <h3 className="font-sans text-xl font-semibold text-forest mt-2 mb-3">{p.title}</h3>
-                <p className="text-sm text-forest/70 leading-relaxed">{p.text}</p>
+                <p className="text-sm text-forest/80 leading-relaxed">{p.text}</p>
               </div>
             ))}
           </div>
@@ -209,7 +182,7 @@ export default function HomePage() {
             Begin Your Journey to Holistic Wellbeing
           </h2>
           <p className="text-cream/80 mb-8 max-w-2xl mx-auto">
-            Book a consultation today and discover how authentic Ayurveda can restore balance, prevent illness, and renew your vitality.
+            Book a consultation today and discover how authentic Ayurveda can restore balance, prevent illness and renew your vitality.
           </p>
           <a
             href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."

@@ -22,7 +22,7 @@ export default function Header() {
     if (typeof window === 'undefined') return;
     const loadLogo = () => {
       try {
-        const raw = localStorage.getItem('sri_jayanthi_data_v7');
+        const raw = localStorage.getItem('sri_jayanthi_data_v8');
         if (raw) {
           const parsed = JSON.parse(raw);
           if (parsed.logoUrl) setLogoUrl(parsed.logoUrl);
@@ -40,22 +40,14 @@ export default function Header() {
   return (
     <header className="md:sticky md:top-0 z-50 bg-[#fdf8f0]/95 backdrop-blur-sm border-b border-[#e8dcc8]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-24 sm:h-28 md:h-32">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <img
               src={logoUrl}
               alt="Sri Jayanthi"
-              className="h-10 sm:h-14 w-auto object-contain shrink-0 mix-blend-multiply"
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain shrink-0"
             />
-            <div className="flex flex-col min-w-0">
-              <span className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-forest leading-tight truncate">
-                Sri Jayanthi
-              </span>
-              <span className="text-[10px] md:text-xs tracking-[0.2em] text-[#b8952a] uppercase font-sans hidden sm:block">
-                Wellbeing
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav */}

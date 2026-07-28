@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Star, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Patient Reviews — Sri Jayanthi Wellbeing Telangana',
-  description: 'Read real patient reviews of Ayurvedic treatment for back pain, sciatica, eczema, and psoriasis at Sri Jayanthi Wellbeing, Telangana.',
+  title: 'Patient Reviews — Sri Jayanthi Wellbeing',
+  description: 'Read real patient reviews of Ayurvedic treatment for back pain, sciatica, eczema and psoriasis at Sri Jayanthi Wellbeing.',
   alternates: { canonical: '/reviews' },
 };
 
@@ -21,7 +21,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: 'Honest, grounded, and effective. I came for sciatica and left with a complete lifestyle reset.',
+    quote: 'Honest, grounded and effective. I came for sciatica and left with a complete lifestyle reset.',
     name: 'Mohammed Ali',
     condition: 'Sciatica',
     rating: 5,
@@ -46,7 +46,7 @@ export default function ReviewsPage() {
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Reviews</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
+          <p className="text-forest/70 max-w-2xl mx-auto">
             Real words from real patients. No editing, no exaggeration.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function ReviewsPage() {
                     <Star key={i} size={14} className="text-gold fill-gold" />
                   ))}
                 </div>
-                <p className="text-sm text-forest/70 leading-relaxed mb-4">
+                <p className="text-sm text-forest/80 leading-relaxed mb-4">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center justify-between">
@@ -106,7 +106,7 @@ export default function ReviewsPage() {
       <section className="py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-sans text-2xl font-bold text-forest mb-3">Your Story Could Help Someone Else</h2>
-          <p className="text-sm text-forest/60 mb-6">
+          <p className="text-sm text-forest/70 mb-6">
             If you have been treated at Sri Jayanthi, sharing your experience helps others take the first step.
           </p>
           <a

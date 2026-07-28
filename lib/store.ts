@@ -40,41 +40,41 @@ export interface SiteData {
   visits: number;
 }
 
-const STORAGE_KEY = 'sri_jayanthi_data_v7';
+const STORAGE_KEY = 'sri_jayanthi_data_v9';
 
 export const defaultProducts: Product[] = [
   {
     id: '1',
     name: 'Gas-Empt',
     description:
-      'A classical Ayurvedic digestive tonic formulated to rekindle digestive fire (Agni), relieve gas, bloating, acidity, and constipation. Supports liver detox and IBS management.',
+      'Gas-Empt helps in improving overall gastric health supporting digestion and alleviating common digestive issues such as bloating and constipation.',
     price: 450,
     image: '/gas-empt.png',
     ingredients:
       'Chitrak, Pippali, Shunti, Maricha, Jeeraka, Hingu, Lavana, Ajamoda',
-    for: 'Gas, bloating, acidity, constipation, IBS, indigestion, liver sluggishness, and low metabolism.',
+    for: 'Gas, bloating, acidity, constipation, IBS, indigestion, liver sluggishness and low metabolism.',
   },
   {
     id: '2',
     name: 'Kasa-Off',
     description:
-      'A potent respiratory relief formulation for chronic cough, cold, and bronchial congestion. Soothes irritated airways and strengthens lung function naturally.',
+      'Kasa-Off helps in reducing dry, productive and allergic Cough. Formulated to address respiratory issues such as cough, cold, rhinitis, bronchitis and asthma with natural Ayurvedic ingredients.',
     price: 444,
     image: '/kasa-off.png',
     ingredients:
       'Dashamoola, Vasaka, Kantakari, Pippali, Yastimadhu, Haridra, Tulsi',
-    for: 'Chronic cough, cold, bronchitis, chest congestion, wheezing, and seasonal respiratory issues.',
+    for: 'Chronic cough, cold, bronchitis, chest congestion, wheezing and seasonal respiratory issues.',
   },
   {
     id: '3',
     name: 'Immune It',
     description:
-      'A daily immunity booster rooted in classical Ayurveda. Strengthens respiratory health, builds defence against seasonal infections, and supports recovery.',
+      'Immune-It helps improve overall immunity. Fortified with a combination of potent Ayurvedic herbs, Immune-It strengthens the immune system and protects against infections, helping the body stay resilient.',
     price: 348,
     image: '/immune-it.png',
     ingredients:
       'Ashwagandha, Guduchi, Tulsi, Yashtimadhu, Pippali, Amalaki, Haridra',
-    for: 'Frequent colds, cough, sinusitis, allergies, asthma, weak immunity, and post-illness recovery.',
+    for: 'Frequent colds, cough, sinusitis, allergies, asthma, weak immunity and post-illness recovery.',
   },
 ];
 
@@ -87,52 +87,31 @@ export const defaultContact: ContactInfo = {
 
 export const defaultCampImages: CampImage[] = [
   {
-    id: 'camp-1',
-    url: '/camps/New 1.png',
-    caption: 'Ayurvedic consultation in progress — personalised health assessment and treatment guidance rooted in classical wisdom.',
-    location: 'Telangana',
-    date: '2025-2026',
-  },
-  {
-    id: 'camp-2',
-    url: '/camps/new 2.png',
-    caption: 'Community wellness camp — bringing preventive and curative Ayurvedic care to rural families across Telangana.',
-    location: 'Telangana',
-    date: '2025-2026',
-  },
-  {
-    id: 'camp-3',
-    url: '/camps/new 3.png',
-    caption: 'Health education and wellness counselling — empowering individuals with daily routines, seasonal diets, and natural remedies.',
-    location: 'Telangana',
-    date: '2025-2026',
-  },
-  {
     id: 'camp-4',
     url: '/camps/image 1.png',
-    caption: 'Direct Ayurvedic consultations at a community health camp — assessing patients for joint pain, digestive disorders, and lifestyle conditions with traditional pulse diagnosis.',
-    location: 'Telangana',
+    caption: 'Direct Ayurvedic consultations at a community health camp — assessing patients for joint pain, digestive disorders and lifestyle conditions with traditional pulse diagnosis.',
+    location: '',
     date: '2025-2026',
   },
   {
     id: 'camp-5',
     url: '/camps/image 3.png',
-    caption: 'Educating village communities on preventive healthcare — teaching families about daily Ayurvedic routines, seasonal diets, and herbal home remedies for common ailments.',
-    location: 'Telangana',
+    caption: 'Educating village communities on preventive healthcare — teaching families about daily Ayurvedic routines, seasonal diets and herbal home remedies for common ailments.',
+    location: '',
     date: '2025-2026',
   },
   {
     id: 'camp-6',
     url: '/camps/image 4.png',
-    caption: 'Distribution of herbal medicines and Ayurvedic supplements to underserved communities — ensuring traditional wellness reaches every doorstep in rural Telangana.',
-    location: 'Telangana',
+    caption: 'Distribution of herbal medicines and Ayurvedic supplements to underserved communities — ensuring traditional wellness reaches every doorstep.',
+    location: '',
     date: '2025-2026',
   },
   {
     id: 'camp-7',
     url: '/camps/image 5.png',
-    caption: 'Women\'s health focus camp — addressing PCOS, menstrual health, and postnatal care through classical Ayurvedic protocols and lifestyle counselling.',
-    location: 'Telangana',
+    caption: 'Women\'s health focus camp — addressing PCOS, menstrual health and postnatal care through classical Ayurvedic protocols and lifestyle counselling.',
+    location: '',
     date: '2025-2026',
   },
 ];

@@ -44,7 +44,7 @@ const services = [
   {
     id: 'preventive',
     title: 'Preventive Health and Wellness Plans',
-    short: 'Guidance to preserve health, prevent disease, and live in rhythm with nature.',
+    short: 'Guidance to preserve health, prevent disease and live in rhythm with nature.',
     items: [
       'Ayurvedic lifestyle',
       'Dinacharya Guidance (Daily Healthy Routine)',
@@ -72,7 +72,7 @@ const services = [
   {
     id: 'rasayana',
     title: 'Rasayana Therapy',
-    short: 'Rejuvenation therapy to delay ageing, enhance vitality, and promote healthy longevity.',
+    short: 'Rejuvenation therapy to delay ageing, enhance vitality and promote healthy longevity.',
     intro: 'Jara Chikitsa (Geriatrics & Rejuvenation) is one of the 8 branches of Ayurveda. Rasayana therapy is one of the potential therapies for mankind to follow within the permissible age limits in order to delay aging process or age healthily. The aging process occurs over all the body. It does not occur in the same way in every human being. People’s lifestyles also have additional influence on aging.',
     items: [
       'Rasayanas help in improving metabolism, enhancing physical strength, memory power, intelligence, skin texture and strength, sweetness of voice',
@@ -126,7 +126,7 @@ export default function ServicesPage() {
               >
                 <div className="min-w-0">
                   <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest">{svc.title}</h2>
-                  <p className="text-sm text-forest/60 mt-1">{svc.short}</p>
+                  <p className="text-sm text-forest/80 mt-1">{svc.short}</p>
                 </div>
                 {expanded === svc.id ? (
                   <ChevronUp size={24} className="text-gold shrink-0" />
@@ -137,14 +137,14 @@ export default function ServicesPage() {
               {expanded === svc.id && (
                 <div className="px-6 md:px-8 pb-6 md:pb-8 border-t border-gold/10">
                   {'intro' in svc && svc.intro && (
-                    <p className="text-sm md:text-base text-forest/70 leading-relaxed mt-4 mb-4">{svc.intro}</p>
+                    <p className="text-sm md:text-base text-forest/80 leading-relaxed mt-4 mb-4">{svc.intro}</p>
                   )}
                   {'mainKarmas' in svc && svc.mainKarmas && (
                     <div className="mb-4">
                       <h3 className="font-sans text-sm font-bold text-forest uppercase tracking-wide mb-2">The 5 Main Karmas</h3>
                       <ul className="grid md:grid-cols-2 gap-2">
                         {svc.mainKarmas.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-forest/70">
+                          <li key={item} className="flex items-start gap-2 text-sm text-forest/90 font-medium">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
                             {item}
                           </li>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                       <h3 className="font-sans text-sm font-bold text-forest uppercase tracking-wide mb-2">External Therapies</h3>
                       <ul className="grid md:grid-cols-3 gap-2">
                         {svc.therapies.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-forest/70">
+                          <li key={item} className="flex items-start gap-2 text-sm text-forest/90 font-medium">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
                             {item}
                           </li>

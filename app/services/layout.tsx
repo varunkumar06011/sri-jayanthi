@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ayurvedic Services in Telangana | Panchakarma, Spine & Skin Care',
-  description: 'Panchakarma, spine treatment, and skin disease care at Sri Jayanthi Wellbeing — serving patients across Telangana with classical Ayurveda.',
+  title: 'Ayurvedic Services | Panchakarma, Spine & Skin Care',
+  description: 'Panchakarma, spine treatment and skin disease care at Sri Jayanthi Wellbeing — serving patients with classical Ayurveda.',
   alternates: { canonical: '/services' },
 };
 

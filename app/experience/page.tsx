@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Experience — Ayurvedic Treatment Results in Telangana',
-  description: 'Real patient outcomes from Ayurvedic treatment for spine, skin, and lifestyle conditions, from our clinic serving patients across Telangana.',
+  title: 'Our Experience — Ayurvedic Treatment Results',
+  description: 'Real patient outcomes from Ayurvedic treatment for spine, skin and lifestyle conditions, from our clinic serving patients.',
   alternates: { canonical: '/experience' },
 };
 
@@ -25,14 +25,14 @@ const caseStudies = [
     patient: 'Priya, 34',
     condition: 'Psoriasis covering 40% of body.',
     before: 'Had been on steroids for 4 years. Flare-ups every winter. Skin was thin and sensitive.',
-    after: 'Three months of blood purification, diet change, and herbal applications. Cleared by 80%. Now manages with diet alone.',
+    after: 'Three months of blood purification, diet change and herbal applications. Cleared by 80%. Now manages with diet alone.',
   },
   {
     title: 'Lifestyle Shift',
     patient: 'Anil, 45',
     condition: 'Type 2 diabetes and obesity.',
     before: 'HbA1c at 9.2, weight 98 kg, constantly fatigued.',
-    after: 'Six months of structured Ayurvedic diet, daily routine changes, and herbal support. HbA1c down to 6.8. Weight 84 kg. Energy restored.',
+    after: 'Six months of structured Ayurvedic diet, daily routine changes and herbal support. HbA1c down to 6.8. Weight 84 kg. Energy restored.',
   },
 ];
 
@@ -43,7 +43,7 @@ export default function ExperiencePage() {
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Experience</h1>
-          <p className="text-forest/60 max-w-2xl mx-auto">
+          <p className="text-forest/70 max-w-2xl mx-auto">
             Numbers matter, but stories matter more. Here is what years of practice look like in real lives.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function ExperiencePage() {
             {stats.map((s) => (
               <div key={s.label} className="p-6 md:p-8 bg-white border border-gray-200 rounded-lg">
                 <div className="font-sans text-3xl md:text-5xl font-bold text-gold mb-2">{s.number}</div>
-                <div className="text-xs md:text-sm text-forest/60 font-medium uppercase tracking-wide">{s.label}</div>
+                <div className="text-xs md:text-sm text-forest/70 font-medium uppercase tracking-wide">{s.label}</div>
               </div>
             ))}
           </div>
@@ -67,7 +67,7 @@ export default function ExperiencePage() {
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50 relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="font-sans text-3xl font-bold text-forest mb-6">Our Story</h2>
-          <div className="space-y-4 text-forest/70 leading-relaxed">
+          <div className="space-y-4 text-forest/80 leading-relaxed">
             <p>
               I started this practice because I saw people suffering from conditions that Ayurveda had already solved centuries ago. 
               Back pain that made a 40-year-old unable to work. Skin diseases that left teenagers hiding at home. 
@@ -110,12 +110,12 @@ export default function ExperiencePage() {
                 </div>
                 <p className="text-xs text-gold uppercase tracking-wide mb-3">{cs.condition}</p>
                 <div className="mb-3">
-                  <span className="text-xs font-semibold text-forest/60">Before:</span>
-                  <p className="text-sm text-forest/60 leading-relaxed">{cs.before}</p>
+                  <span className="text-xs font-semibold text-forest/70">Before:</span>
+                  <p className="text-sm text-forest/70 leading-relaxed">{cs.before}</p>
                 </div>
                 <div>
                   <span className="text-xs font-semibold text-gold">After:</span>
-                  <p className="text-sm text-forest/70 leading-relaxed">{cs.after}</p>
+                  <p className="text-sm text-forest/80 leading-relaxed">{cs.after}</p>
                 </div>
               </div>
             ))}
