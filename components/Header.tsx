@@ -40,13 +40,13 @@ export default function Header() {
   return (
     <header className="md:sticky md:top-0 z-50 bg-[#fdf8f0]/95 backdrop-blur-sm border-b border-[#e8dcc8]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 sm:h-28 md:h-32">
+        <div className="flex items-center justify-between h-28 sm:h-32 md:h-36">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <img
               src={logoUrl}
               alt="Sri Jayanthi"
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain shrink-0"
+              className="h-24 sm:h-28 md:h-32 w-auto object-contain shrink-0"
             />
           </Link>
 

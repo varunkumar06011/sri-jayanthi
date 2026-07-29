@@ -82,12 +82,6 @@ function ProductCard({ product, whatsappNumber }: { product: Product; whatsappNu
           <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest tracking-tight">
             {product.name}
           </h2>
-          <div className="flex items-center gap-3 mt-2">
-            <span className="text-2xl font-bold text-gold">₹{product.price.toLocaleString()}</span>
-            <span className="text-xs px-2 py-0.5 bg-forest/10 text-forest rounded-full font-medium">
-              Ayurvedic
-            </span>
-          </div>
         </div>
         <div className="w-12 h-0.5 bg-gold mb-4" />
         <p className="text-sm md:text-base text-forest/80 leading-relaxed mb-5">
@@ -130,8 +124,8 @@ export default function ProductsPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Products</h1>
-          <p className="text-forest/70 max-w-3xl mx-auto">
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Products</h1>
+          <p className="font-semibold text-forest/70 max-w-3xl mx-auto">
             Authentic Ayurveda and wellness products manufacturer with uncompromising quality.
           </p>
         </div>
@@ -161,7 +155,7 @@ export default function ProductsPage() {
       <section className="py-10 md:py-14 border-t border-[#e8dcc8] bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Proprietary Medicines</h2>
+            <h2 className="font-sans text-xl md:text-2xl font-bold text-forest mb-3">Proprietary Medicines</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           {products.length > 0 ? (
@@ -191,7 +185,7 @@ export default function ProductsPage() {
       <section className="py-16 md:py-24 border-t border-[#e8dcc8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Classical Products</h2>
+            <h2 className="font-sans text-xl md:text-2xl font-bold text-forest mb-3">Classical Products</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -203,7 +197,7 @@ export default function ProductsPage() {
                   </div>
                   <div>
                     <h3 className="font-sans text-xl font-semibold text-forest">{product.name}</h3>
-                    <p className="text-sm text-gold font-medium flex items-center gap-1 mt-1">
+                    <p className="text-sm text-gold font-bold flex items-center gap-1 mt-1">
                       <Leaf size={12} />
                       {product.benefit}
                     </p>

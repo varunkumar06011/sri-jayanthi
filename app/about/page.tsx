@@ -12,8 +12,8 @@ export default function AboutPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">About Us</h1>
-          <p className="text-forest/70 max-w-2xl mx-auto">
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">About Us</h1>
+          <p className="font-semibold text-forest/70 max-w-2xl mx-auto">
             Rooted in ancient wisdom, guided by experience and committed to holistic wellbeing.
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="py-12 md:py-16 border-t border-gray-100 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">Our Team</h2>
+            <h2 className="font-sans text-xl md:text-2xl font-bold text-forest mb-3">Our Team</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-sans text-xl font-semibold text-forest">Dr. Srujana Komatreddy</h3>
-                  <p className="text-sm text-gold font-medium">Managing Partner and Ayurveda Physician</p>
+                  <p className="text-sm text-gold font-bold">Managing Partner and Ayurveda Physician</p>
                 </div>
               </div>
               <div className="space-y-3 text-sm text-forest/80 leading-relaxed">
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-sans text-xl font-semibold text-forest">Sri K. Sanjeeva Reddy</h3>
-                  <p className="text-sm text-gold font-medium">Partner</p>
+                  <p className="text-sm text-gold font-bold">Partner</p>
                 </div>
               </div>
               <div className="space-y-3 text-sm text-forest/80 leading-relaxed">

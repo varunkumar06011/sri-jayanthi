@@ -20,15 +20,15 @@ export default function GalleryPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-2">Gallery</h1>
-          <p className="text-sm md:text-base text-forest/70">Glimpse of Community Outreach Program</p>
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-2">Gallery</h1>
+          <p className="text-sm md:text-base font-semibold text-forest/70">Glimpse of Community Outreach Program</p>
         </div>
       </section>
 
-      {/* Medical / Awareness Camps */}
+      {/* Medical Camps */}
       <section className="py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest mb-8 text-center">Medical Camps / Awareness Camps</h2>
+          <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest mb-8 text-center">Medical Camps</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { src: '/camps/camp 1.jpg', alt: 'Camp 1' },
@@ -53,9 +53,10 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
+      {/* Health Awareness Sessions */}
       <section className="py-12 md:py-16 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest mb-8 text-center">Health Awareness Sessions</h2>
           {images.length === 0 ? (
             <div className="text-center py-16 text-forest/40">
               <CalendarDays size={40} className="mx-auto mb-3 opacity-40" />

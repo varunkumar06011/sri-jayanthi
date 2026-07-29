@@ -14,7 +14,7 @@ const services = [
       'Gut Health',
       'Dermatological Issues',
       'Lifestyle & Chronic Disease Management',
-      'Women’s Health',
+      'Women\u2019s Health',
     ],
   },
   {
@@ -23,11 +23,11 @@ const services = [
     short: 'The classical method of cleansing the body by removing toxins and rejuvenating the system.',
     intro: 'Panchakarma is the method of cleansing the body by removing toxins based on the disease condition and is an effective process for rejuvenation. The 5 main Karmas include:',
     mainKarmas: [
-      'Vamana – Therapeutic emesis',
-      'Virechana – Induced purgation',
-      'Anuvasana Vasti – Enema using medicated oil',
-      'Nasyam – Nasal instillation of medicated substances',
-      'Asthapana Vasti – Enema using therapeutic decoctions',
+      'Vamana \u2013 Therapeutic emesis',
+      'Virechana \u2013 Induced purgation',
+      'Anuvasana Vasti \u2013 Enema using medicated oil',
+      'Nasyam \u2013 Nasal instillation of medicated substances',
+      'Asthapana Vasti \u2013 Enema using therapeutic decoctions',
     ],
     therapies: [
       'Udvarthanam',
@@ -69,19 +69,6 @@ const services = [
     short: 'Authentic classical and proprietary formulations to support treatment and daily wellness.',
     items: [],
   },
-  {
-    id: 'rasayana',
-    title: 'Rasayana Therapy',
-    short: 'Rejuvenation therapy to delay ageing, enhance vitality and promote healthy longevity.',
-    intro: 'Jara Chikitsa (Geriatrics & Rejuvenation) is one of the 8 branches of Ayurveda. Rasayana therapy is one of the potential therapies for mankind to follow within the permissible age limits in order to delay aging process or age healthily. The aging process occurs over all the body. It does not occur in the same way in every human being. People’s lifestyles also have additional influence on aging.',
-    items: [
-      'Rasayanas help in improving metabolism, enhancing physical strength, memory power, intelligence, skin texture and strength, sweetness of voice',
-      'Rasayanas keep the body and mind pleasant',
-      'Rasayanas help in nourishes lymph and blood tissue thereby improving the activity and nourishment of other tissues in the body thus improving resistance against infections by increasing immunity power',
-      'Rasayana prevents ageing, graying of hair, wasting of muscles; improves bone strength, blood circulation, appetite, sleep',
-      'Use of Rasayanas helps in healthy ageing, prevents chronic degenerative disorders like Arthritis, Alzheimer’s and senile disorders',
-    ],
-  },
 ];
 
 export default function ServicesPage() {
@@ -106,10 +93,10 @@ export default function ServicesPage() {
   return (
     <div className="pb-16">
       {/* Page Header */}
-      <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
+      <section className="py-10 md:py-14 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Services</h1>
-          <p className="text-forest/60 max-w-3xl mx-auto">
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Services</h1>
+          <p className="text-sm md:text-base font-semibold text-forest/60 max-w-3xl mx-auto">
             As an Ayurveda and Wellbeing organization, we are committed to promoting holistic health through authentic Ayurvedic solutions and wellness programs.
           </p>
         </div>
@@ -126,7 +113,7 @@ export default function ServicesPage() {
               >
                 <div className="min-w-0">
                   <h2 className="font-sans text-xl md:text-2xl font-semibold text-forest">{svc.title}</h2>
-                  <p className="text-sm text-forest/80 mt-1">{svc.short}</p>
+                  <p className="text-sm font-semibold text-forest/80 mt-1">{svc.short}</p>
                 </div>
                 {expanded === svc.id ? (
                   <ChevronUp size={24} className="text-gold shrink-0" />

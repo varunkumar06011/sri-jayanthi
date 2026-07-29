@@ -13,8 +13,8 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="py-12 md:py-20 border-b border-gray-100 bg-parchment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Contact Us</h1>
-          <p className="text-forest/70 max-w-2xl mx-auto">
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Contact Us</h1>
+          <p className="font-semibold text-forest/70 max-w-2xl mx-auto">
             We are here to help you begin your journey towards holistic health and wellbeing.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               <Clock size={22} />
             </div>
             <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Consultations: Timings and Fee</h2>
-            <p className="text-sm text-gold font-medium">Dr. Srujana Komatreddy</p>
+            <p className="text-sm text-gold font-bold">Dr. Srujana Komatreddy</p>
           </div>
           <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 space-y-4">
             <div className="flex items-start gap-3">
@@ -94,7 +94,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-3">
               <span className="text-gold font-bold shrink-0">₹</span>
               <div>
-                <p className="text-sm font-semibold text-forest">Online Consultation / Wellness Counselling Fees</p>
+                <p className="text-sm font-semibold text-forest">Online Wellness Consultation Fees</p>
                 <p className="text-sm text-forest/80">Rs. 1000/- INR</p>
               </div>
             </div>

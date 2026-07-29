@@ -113,6 +113,9 @@ export default function HomePage() {
             <p>
               <span className="font-semibold text-forest">समदोषः समाग्निश्च समधातुमलक्रियाः।<br />प्रसन्नात्मेन्द्रियमनाः स्वस्थ इत्यभिधीयते॥</span>
             </p>
+            <p className="italic text-forest/70">
+              Samadoṣaḥ samāgniśca samadhātumalakriyāḥ |<br />Prasannātmendriyamanāḥ svastha ityabhidhīyate ||
+            </p>
             <p>
               Ayurveda views health as far more than the mere absence of disease. It is a state of complete harmony in which the Doshas (Vata, Pitta and Kapha) are in balance, Agni (the digestive and metabolic fire) functions optimally, the Dhatus (body tissues) are well nourished and the Malas (natural waste elimination processes) are maintained efficiently.
             </p>
@@ -145,7 +148,7 @@ export default function HomePage() {
                   <tile.icon size={22} className="text-forest group-hover:text-cream" />
                 </div>
                 <h3 className="font-sans text-xl font-semibold text-forest mb-2">{tile.title}</h3>
-                <p className="text-sm text-forest/70">{tile.description}</p>
+                <p className="text-sm font-semibold text-forest/70">{tile.description}</p>
               </Link>
             ))}
           </div>
@@ -156,7 +159,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24 border-t border-[#e8dcc8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-forest mb-3">
+            <h2 className="font-sans text-xl md:text-2xl font-bold text-forest mb-3">
               Our Approach
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto" />
@@ -168,9 +171,47 @@ export default function HomePage() {
                   <p.icon size={20} />
                 </div>
                 <h3 className="font-sans text-xl font-semibold text-forest mt-2 mb-3">{p.title}</h3>
-                <p className="text-sm text-forest/80 leading-relaxed">{p.text}</p>
+                <p className="text-sm font-semibold text-forest/80 leading-relaxed">{p.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rasayana Chikitsa — Gyan / Info Section */}
+      <section className="py-16 md:py-24 border-t border-[#e8dcc8] bg-parchment">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Rasayana Chikitsa</h2>
+            <p className="text-sm text-gold font-bold">Jara Chikitsa &mdash; Geriatrics & Rejuvenation</p>
+            <div className="w-16 h-0.5 bg-gold mx-auto mt-3" />
+          </div>
+          <div className="space-y-4 text-sm md:text-base text-forest/80 leading-relaxed text-left">
+            <p>
+              Rasayana therapy is one of the potential therapies for mankind to follow within the permissible age limits in order to delay the aging process or age healthily. The aging process occurs over all the body. It does not occur in the same way in every human being. People&rsquo;s lifestyles also have additional influence on aging.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                <span>Rasayanas help in improving metabolism, enhancing physical strength, memory power, intelligence, skin texture and strength, sweetness of voice</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                <span>Rasayanas keep the body and mind pleasant</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                <span>Rasayanas help in nourishing lymph and blood tissue thereby improving the activity and nourishment of other tissues in the body, thus improving resistance against infections by increasing immunity power</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                <span>Rasayana prevents ageing, graying of hair, wasting of muscles; improves bone strength, blood circulation, appetite, sleep</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" />
+                <span>Use of Rasayanas helps in healthy ageing, prevents chronic degenerative disorders like Arthritis, Alzheimer&rsquo;s and senile disorders</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

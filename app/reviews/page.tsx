@@ -45,8 +45,8 @@ export default function ReviewsPage() {
     <div className="pb-16">
       <section className="py-12 md:py-20 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-3xl md:text-5xl font-bold text-forest mb-4">Reviews</h1>
-          <p className="text-forest/70 max-w-2xl mx-auto">
+          <h1 className="font-sans text-2xl md:text-3xl font-bold text-forest mb-3">Reviews</h1>
+          <p className="font-semibold text-forest/70 max-w-2xl mx-auto">
             Real words from real patients. No editing, no exaggeration.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function ReviewsPage() {
       <section className="py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-sans text-2xl font-bold text-forest mb-3">Your Story Could Help Someone Else</h2>
-          <p className="text-sm text-forest/70 mb-6">
+          <p className="text-sm font-semibold text-forest/70 mb-6">
             If you have been treated at Sri Jayanthi, sharing your experience helps others take the first step.
           </p>
           <a
