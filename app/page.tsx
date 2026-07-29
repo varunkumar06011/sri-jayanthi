@@ -67,20 +67,20 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="relative sm:absolute bottom-0 sm:bottom-8 left-auto sm:left-5 right-auto sm:right-5 md:left-10 md:right-10 lg:left-14 lg:right-14 z-10 w-full sm:w-auto px-5 sm:px-0">
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-3 pb-8 sm:pb-0">
+        <div className="hidden sm:block absolute bottom-8 left-5 right-5 md:left-10 md:right-10 lg:left-14 lg:right-14 z-10">
+          <div className="flex flex-row justify-between items-center gap-3">
             <a
               href="https://wa.me/919177816622?text=Hi, I'd like to book a consultation."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-cream text-sm font-medium rounded-sm hover:bg-forest transition-colors"
             >
               Book Consultation
               <ArrowRight size={16} />
             </a>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white/60 text-white text-sm font-medium rounded-sm hover:bg-white hover:text-forest transition-colors"
             >
               Explore Services
             </Link>
@@ -89,7 +89,7 @@ export default function HomePage() {
 
         <a
           href="#philosophy"
-          className="absolute bottom-28 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
+          className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors"
         >
           <ChevronDown size={28} className="animate-bounce-scroll" />
         </a>
