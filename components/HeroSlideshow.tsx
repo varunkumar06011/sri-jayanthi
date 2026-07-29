@@ -40,7 +40,7 @@ export default function HeroSlideshow() {
 
   return (
     <div
-      className="absolute inset-0 overflow-hidden bg-forest"
+      className="absolute inset-0 overflow-hidden bg-white"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={() => setPaused(true)}
@@ -82,7 +82,7 @@ export default function HeroSlideshow() {
           prev();
         }}
         aria-label="Previous slide"
-        className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-[5] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 hover:bg-gold text-white flex items-center justify-center backdrop-blur-sm border border-white/30 transition-colors"
+        className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-[15] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 hover:bg-gold text-white flex items-center justify-center backdrop-blur-sm border border-white/30 transition-colors"
       >
         <ChevronLeft size={22} />
       </button>
@@ -93,12 +93,12 @@ export default function HeroSlideshow() {
           next();
         }}
         aria-label="Next slide"
-        className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-[5] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 hover:bg-gold text-white flex items-center justify-center backdrop-blur-sm border border-white/30 transition-colors"
+        className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-[15] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 hover:bg-gold text-white flex items-center justify-center backdrop-blur-sm border border-white/30 transition-colors"
       >
         <ChevronRight size={22} />
       </button>
 
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-[5] flex items-center gap-2">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-[15] flex items-center gap-2">
         {images.map((_, i) => (
           <button
             key={i}

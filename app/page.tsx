@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="relative min-h-[62vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <HeroSlideshow />
 
-        <div className="relative z-10 flex flex-col items-center text-center px-5 sm:px-10 md:px-14 py-14 sm:py-16">
+        <div className="relative z-10 flex flex-col items-center text-center px-5 sm:px-10 md:px-14 py-14 sm:py-16 pointer-events-none">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-10 h-px bg-white/50" />
             <svg viewBox="0 0 120 20" fill="none" className="w-16 h-4 text-white/50">
