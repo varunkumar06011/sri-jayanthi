@@ -134,22 +134,6 @@ export default function Footer() {
             <span className="text-xs text-cream/50">Follow us on social media</span>
           </div>
         </div>
-        <div className="mt-6 pt-5 border-t border-gold/30 text-center">
-          <p className="text-xs sm:text-sm text-cream/80 font-medium tracking-wide">
-            Website done and maintained by{' '}
-            <span className="text-gold font-semibold">Vtech</span>
-            {' · '}
-            Contact:{' '}
-            <a
-              href="https://wa.me/919393178370?text=Hi%20Vtech%2C%20I%20found%20your%20contact%20on%20Sri%20Jayanthi%20Wellbeing%20website."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold hover:text-cream transition-colors font-semibold"
-            >
-              9393178370
-            </a>
-          </p>
-        </div>
       </div>
     </footer>
   );
